@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AgenciasDataSet" targetNamespace="http://tempuri.org/AgenciasDataSet.xsd" xmlns:mstns="http://tempuri.org/AgenciasDataSet.xsd" xmlns="http://tempuri.org/AgenciasDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AgenciasConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AgenciasConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Vistas.Properties.Settings.GlobalReference.Default.AgenciasConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuarioTableAdapter" GeneratorDataComponentClassName="UsuarioTableAdapter" Name="Usuario" UserDataComponentName="UsuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AgenciasConnectionString (Settings)" DbObjectName="dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT usu_nombreUsuario, usu_apellidoNombre, rol_codigo FROM dbo.Usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usu_nombreUsuario" DataSetColumn="usu_nombreUsuario" />
+              <Mapping SourceColumn="usu_apellidoNombre" DataSetColumn="usu_apellidoNombre" />
+              <Mapping SourceColumn="rol_codigo" DataSetColumn="rol_codigo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AgenciasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AgenciasDataSet" msprop:Generator_UserDSName="AgenciasDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_RowClassName="UsuarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usu_nombreUsuario" msprop:Generator_ColumnVarNameInTable="columnusu_nombreUsuario" msprop:Generator_ColumnPropNameInRow="usu_nombreUsuario" msprop:Generator_ColumnPropNameInTable="usu_nombreUsuarioColumn" msprop:Generator_UserColumnName="usu_nombreUsuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usu_apellidoNombre" msprop:Generator_ColumnVarNameInTable="columnusu_apellidoNombre" msprop:Generator_ColumnPropNameInRow="usu_apellidoNombre" msprop:Generator_ColumnPropNameInTable="usu_apellidoNombreColumn" msprop:Generator_UserColumnName="usu_apellidoNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rol_codigo" msprop:Generator_ColumnVarNameInTable="columnrol_codigo" msprop:Generator_ColumnPropNameInRow="rol_codigo" msprop:Generator_ColumnPropNameInTable="rol_codigoColumn" msprop:Generator_UserColumnName="rol_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
