@@ -150,7 +150,7 @@ namespace ClaseBase.BD
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT vta_id as 'ID', cli_apellido + ' ' + cli_nombre as 'Cliente', ";
             cmd.CommandText += "veh_matricula as 'Matricula', lin_nombre as 'Linea', ";
-            cmd.CommandText += "mar_nombre as 'Marca', vta_fecha as 'Fecha', pag_descripcion as 'Forma de Pago', ";
+            cmd.CommandText += "mar_nombre as 'Marca', vta_fecha as 'Fecha', pag_forma as 'Forma de Pago', ";
             cmd.CommandText += "vta_precioFinal as 'Precio Final' ";
             cmd.CommandText += "FROM Venta as V ";
             cmd.CommandText += "LEFT JOIN Cliente as C ON (C.cli_id=V.cli_id) ";

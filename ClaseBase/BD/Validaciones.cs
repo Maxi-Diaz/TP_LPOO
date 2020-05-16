@@ -58,7 +58,7 @@ namespace ClaseBase.BD {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = " SELECT * FROM Usuario ";
+            cmd.CommandText = " SELECT * FROM Usuario";
             cmd.CommandText += " WHERE usu_nombreUsuario = @user AND ";
             cmd.CommandText += " usu_contrasenia = @pwd ";
             cmd.CommandType = CommandType.Text;

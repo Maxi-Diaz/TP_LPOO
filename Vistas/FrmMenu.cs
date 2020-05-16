@@ -23,6 +23,7 @@ namespace Vistas
 
         public FrmMenu(String user, string pwd)
         {
+            
             InitializeComponent();
             cargar_nombre(user, pwd);
             usu = user;
