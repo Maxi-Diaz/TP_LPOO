@@ -88,7 +88,6 @@ namespace ClaseBase.BD
             DataTable dt = new DataTable();
             da.Fill(ds, "UsuarioRol");
             dt = ds.Tables[0];
-
             return dt;
         }
 

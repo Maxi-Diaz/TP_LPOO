@@ -32,16 +32,13 @@ namespace Vistas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();
-            if(txtApellido.Text!="" && txtUsuario.Text!="" && txtPass.Text!=""){
-                user.Rol_Codigo = int.Parse(cmbRol.SelectedValue.ToString());
+            user.Rol_Codigo = cmbRol.SelectedValue.ToString();
             user.Usr_ApellidoNombre = txtApellido.Text;
             user.Usr_NombreUsuario = txtUsuario.Text;
             user.Usr_Contrasenia = txtPass.Text;
 
             UsuarioABM.agregarUsuario(user);
             this.Close();
-            }
-            
         }
     }
 }

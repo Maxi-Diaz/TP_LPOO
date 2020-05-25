@@ -31,25 +31,25 @@
             this.tbListaVentas = new System.Windows.Forms.DataGridView();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize) (this.tbListaVentas)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tbListaVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // tbListaVentas
             // 
-            this.tbListaVentas.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbListaVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbListaVentas.Location = new System.Drawing.Point(24, 131);
+            this.tbListaVentas.Location = new System.Drawing.Point(24, 102);
             this.tbListaVentas.Name = "tbListaVentas";
-            this.tbListaVentas.Size = new System.Drawing.Size(774, 343);
+            this.tbListaVentas.Size = new System.Drawing.Size(774, 372);
             this.tbListaVentas.TabIndex = 0;
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.btnCerrar.Location = new System.Drawing.Point(683, 21);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -63,29 +63,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(297, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 30);
             this.label1.TabIndex = 15;
             this.label1.Text = "Listado Ventas";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(89, 71);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 94);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 16;
+            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.TabIndex = 18;
             this.label2.Text = "Marca:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(71, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FrmListadoVentas
             // 
@@ -99,7 +101,7 @@
             this.Controls.Add(this.tbListaVentas);
             this.Name = "FrmListadoVentas";
             this.Text = "Ventas";
-            ((System.ComponentModel.ISupportInitialize) (this.tbListaVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbListaVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,7 +112,7 @@
         private System.Windows.Forms.DataGridView tbListaVentas;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

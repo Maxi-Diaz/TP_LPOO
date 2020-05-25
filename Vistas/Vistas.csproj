@@ -59,16 +59,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Vistas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <ExecutableExtension>.exe</ExecutableExtension>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgenciasDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AgenciasDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,17 +167,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AgenciasDataSet.xsc">
-      <DependentUpon>AgenciasDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AgenciasDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AgenciasDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AgenciasDataSet.xss">
-      <DependentUpon>AgenciasDataSet.xsd</DependentUpon>
-    </None>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

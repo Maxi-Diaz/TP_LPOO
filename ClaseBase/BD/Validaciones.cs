@@ -14,10 +14,8 @@ namespace ClaseBase.BD {
 
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = " SELECT rol_Codigo FROM Usuario";
-            cmd.CommandText += " WHERE usu_nombreUsuario = @user AND ";
-            cmd.CommandText += " usu_contrasenia = @pwd ";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "validar_login";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@user", user);

@@ -42,9 +42,9 @@ namespace ClaseBase
             get { return vta_Fecha; }
             set { vta_Fecha = value; }
         }
-        private int pag_Id;
+        private string pag_Id;
 
-        public int Pag_Id
+        public string Pag_Id
         {
             get { return pag_Id; }
             set { pag_Id = value; }

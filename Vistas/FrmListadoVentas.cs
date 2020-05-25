@@ -8,26 +8,29 @@ using System.Text;
 using System.Windows.Forms;
 using ClaseBase.BD;
 
-namespace Vistas {
-    public partial class FrmListadoVentas: Form {
-        public FrmListadoVentas() {
+namespace Vistas
+{
+    public partial class FrmListadoVentas : Form
+    {
+        public FrmListadoVentas()
+        {
             InitializeComponent();
             cargar();
         }
 
-        private void cargar() {
+        private void cargar()
+        {
             tbListaVentas.DataSource = VentasABM.list_venta();
         }
 
-        private void btnCerrar_Click( object sender, EventArgs e ) {
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void textBox1_TextChanged( object sender, EventArgs e ) {
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
             tbListaVentas.DataSource = VentasABM.buscarMarcaVenta(textBox1.Text);
         }
-
-
-
     }
 }

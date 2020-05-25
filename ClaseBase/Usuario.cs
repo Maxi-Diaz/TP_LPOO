@@ -34,8 +34,8 @@ namespace ClaseBase
             get { return usr_ApellidoNombre; }
             set { usr_ApellidoNombre = value; }
         }
-        private int rol_Codigo;
-        public int Rol_Codigo
+        private string rol_Codigo;
+        public string Rol_Codigo
         {
             get { return rol_Codigo; }
             set { rol_Codigo = value; }

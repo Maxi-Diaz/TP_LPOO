@@ -103,7 +103,6 @@
             this.tbx_dni.Name = "tbx_dni";
             this.tbx_dni.Size = new System.Drawing.Size(100, 20);
             this.tbx_dni.TabIndex = 17;
-            this.tbx_dni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_dni_KeyPress);
             // 
             // label5
             // 

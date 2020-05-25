@@ -13,9 +13,8 @@ namespace ClaseBase.BD
         {
             SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Cliente(cli_dni,cli_nombre,cli_apellido,cli_direccion,cli_telefono) ";
-            cmd.CommandText += "values(@dni,@nombre,@apellido,@dire,@tel)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "inset_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexion;
 
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_Dni);
@@ -33,9 +32,8 @@ namespace ClaseBase.BD
         {
             SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Cliente SET cli_nombre = @nombre, cli_apellido = @apellido,";
-            cmd.CommandText += " cli_direccion = @dire, cli_telefono = @tel WHERE cli_dni = @dni";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "edit_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexion;
 
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_Dni);
@@ -53,8 +51,8 @@ namespace ClaseBase.BD
         {
             SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM Cliente WHERE cli_dni = @dni";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "eliminar_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexion;
 
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_Dni);
@@ -68,9 +66,8 @@ namespace ClaseBase.BD
         {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText += "SELECT cli_dni as 'DNI', cli_nombre as 'Nombre', cli_apellido as 'Apellido', ";
-            cmd.CommandText += " cli_direccion as 'Direccion', cli_telefono as 'Telefono' FROM Cliente";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             // Ejecuta la consulta
@@ -87,11 +84,8 @@ namespace ClaseBase.BD
         {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT ";
-            cmd.CommandText += "cli_dni as 'DNI', cli_nombre as 'Nombre', cli_apellido as 'Apellido', ";
-            cmd.CommandText += "cli_direccion as 'Direccion', cli_telefono as 'Telefono' ";
-            cmd.CommandText += "FROM Cliente WHERE cli_nombre LIKE @pattern OR cli_apellido LIKE @pattern";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "buscar_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");

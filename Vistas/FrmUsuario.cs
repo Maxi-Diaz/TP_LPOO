@@ -41,13 +41,16 @@ namespace Vistas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if(tblUsuario.SelectedRows.Count > 0){
+            if (tblUsuario.SelectedRows.Count > 0)
+            {
                 Usuario user = new Usuario();
                 user.Usr_Id = int.Parse(tblUsuario.CurrentRow.Cells["ID"].Value.ToString());
                 UsuarioABM.borrarUsuario(user);
                 MessageBox.Show("Se elimino el usuario correctamente");
                 Cargar_Usuarios();
-            } else {
+            }
+            else
+            {
                 MessageBox.Show("Seleccione una fila por favor");
             }
         }

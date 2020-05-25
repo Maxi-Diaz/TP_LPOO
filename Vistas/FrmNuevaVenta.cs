@@ -40,8 +40,8 @@ namespace Vistas
 
         private void load_combo_formaPago()
         {
-            cmbPago.DisplayMember = "pag_Forma";
-            cmbPago.ValueMember = "pag_ID";
+            cmbPago.DisplayMember = "pag_descripcion";
+            cmbPago.ValueMember = "pag_id";
             cmbPago.DataSource = VentasABM.list_forma_pago();
         }
 
@@ -76,7 +76,7 @@ namespace Vistas
                 oVenta.Veh_Id = (int)cmbVehiculo.SelectedValue;
                 oVenta.Usr_Id = (int)cmbCliente.SelectedValue;
                 oVenta.Vta_Fecha = dtmFecha.Value;
-                oVenta.Pag_Id = (int)cmbPago.SelectedValue;
+                oVenta.Pag_Id = cmbPago.SelectedValue.ToString();
                 oVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
 
 

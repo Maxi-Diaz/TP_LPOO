@@ -55,11 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgenciasDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AgenciasDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BD\ClienteABM.cs" />
     <Compile Include="BD\UsuarioABM.cs" />
     <Compile Include="BD\Validaciones.cs" />
@@ -81,17 +76,6 @@
     <Compile Include="Venta.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AgenciasDataSet.xsc">
-      <DependentUpon>AgenciasDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AgenciasDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AgenciasDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AgenciasDataSet.xss">
-      <DependentUpon>AgenciasDataSet.xsd</DependentUpon>
-    </None>
     <None Include="app.config" />
     <None Include="DiagramaVentas.cd" />
     <None Include="Properties\Settings.settings">
@@ -130,15 +114,6 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Agencias.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Agencias_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Agencias.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
