@@ -58,6 +58,7 @@
     <Compile Include="BD\ClienteABM.cs" />
     <Compile Include="BD\UsuarioABM.cs" />
     <Compile Include="BD\Validaciones.cs" />
+    <Compile Include="BD\VehiculoABM.cs" />
     <Compile Include="BD\VentasABM.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="FormaPago.cs" />

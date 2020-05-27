@@ -17,3 +17,9 @@ D:\Apu\LPOO2020\unidad-5\TP3-LPOO\LPOOI_GRUPO08\ClaseBase\bin\Debug\ClaseBase.pd
 D:\Apu\LPOO2020\unidad-5\TP3-LPOO\LPOOI_GRUPO08\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 D:\Apu\LPOO2020\unidad-5\TP3-LPOO\LPOOI_GRUPO08\ClaseBase\obj\Debug\ClaseBase.dll
 D:\Apu\LPOO2020\unidad-5\TP3-LPOO\LPOOI_GRUPO08\ClaseBase\obj\Debug\ClaseBase.pdb
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll.config
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.pdb
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.dll
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.pdb
