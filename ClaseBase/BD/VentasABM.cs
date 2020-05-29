@@ -229,5 +229,69 @@ namespace ClaseBase.BD
 
             return dt;
         }
+
+
+        /////////////////////////////////AGREGADO 29/5////////////////////////////////////////
+
+
+        public static DataTable list_Compras(int id) {
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "venta_Cliente";
+            // cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            SqlParameter param;
+            param = new SqlParameter("@idC", SqlDbType.Int);
+            param.Direction = ParameterDirection.Input;
+            param.Value = id;
+
+
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.SelectCommand.Parameters.Add(param);
+            // Llena los datos de la consulta en el DataTable
+
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable list_Fecha(DateTime inicio, DateTime final) {
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "venta_Fechas";
+            // cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            /*  SqlParameter param;
+              param = new SqlParameter("@primeraFecha", SqlDbType.DateTime);
+              param.Direction = ParameterDirection.Input;
+              param.Value = inicio;*/
+
+            cmd.Parameters.AddWithValue("@primeraFecha", inicio);
+            cmd.Parameters.AddWithValue("@segundaFecha", final);
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //  da.SelectCommand.Parameters.Add(param);
+            // Llena los datos de la consulta en el DataTable
+
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////
     }
 }

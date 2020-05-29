@@ -21,9 +21,9 @@ namespace ClaseBase
             get { return veh_Marca; }
             set { veh_Marca = value; }
         }
-        private string lin_Id;
+        private int lin_Id;
 
-        public string Lin_Id
+        public int Lin_Id
         {
             get { return lin_Id; }
             set { lin_Id = value; }
@@ -78,19 +78,12 @@ namespace ClaseBase
             set { veh_Precio = value; }
         }
 
-        public Vehiculo(string matricula, string marca, string linea, int modelo,
-            string color, int puerta, bool gps, string tipo, string clase, decimal precio)
-        {
-            Veh_Matricula = matricula;
-            Veh_Marca = marca;
-            Lin_Id = linea;
-            Veh_Modelo = modelo;
-            Veh_Color = color;
-            Veh_Puerta = puerta;
-            Veh_GPS = gps;
-            Veh_TipoVehiculo = tipo;
-            Veh_ClaseVehiculo = clase;
-            Veh_Precio = precio;
+     
+        private int veh_ID;
+
+        public int Veh_ID {
+            get { return veh_ID; }
+            set { veh_ID = value; }
         }
     }
 }

@@ -40,7 +40,7 @@ namespace Vistas
 
         private void load_combo_formaPago()
         {
-            cmbPago.DisplayMember = "pag_descripcion";
+            cmbPago.DisplayMember = "pag_Forma";
             cmbPago.ValueMember = "pag_id";
             cmbPago.DataSource = VentasABM.list_forma_pago();
         }

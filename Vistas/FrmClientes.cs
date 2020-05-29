@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using ClaseBase.BD;
 using ClaseBase;
+using Vistas.Listados;
+
 
 namespace Vistas
 {
@@ -93,7 +95,8 @@ namespace Vistas
 
         private void btnporApellido_Click(object sender, EventArgs e)
         {
-            tblCliente.DataSource = ClienteABM.ordenarPorApellido();
+            FrmListadoSimple oFrm = new FrmListadoSimple("Cliente");
+            oFrm.Show();
         }
     }
 }

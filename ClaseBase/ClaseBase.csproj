@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD\ClienteABM.cs" />
+    <Compile Include="BD\ListaABM.cs" />
+    <Compile Include="BD\MarcaABM.cs" />
     <Compile Include="BD\UsuarioABM.cs" />
     <Compile Include="BD\Validaciones.cs" />
     <Compile Include="BD\VehiculoABM.cs" />

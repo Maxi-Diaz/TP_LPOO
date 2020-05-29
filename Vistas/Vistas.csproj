@@ -115,6 +115,12 @@
     <Compile Include="FrmNuevaVenta.Designer.cs">
       <DependentUpon>FrmNuevaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNuevoVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoVehiculo.Designer.cs">
+      <DependentUpon>FrmNuevoVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,24 @@
     </Compile>
     <Compile Include="FrmVehiculo.Designer.cs">
       <DependentUpon>FrmVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\FrmListadoDato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\FrmListadoDato.Designer.cs">
+      <DependentUpon>FrmListadoDato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\FrmListadoFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\FrmListadoFechas.Designer.cs">
+      <DependentUpon>FrmListadoFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\FrmListadoSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\FrmListadoSimple.Designer.cs">
+      <DependentUpon>FrmListadoSimple.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,11 +180,23 @@
     <EmbeddedResource Include="FrmNuevaVenta.resx">
       <DependentUpon>FrmNuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoVehiculo.resx">
+      <DependentUpon>FrmNuevoVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculo.resx">
       <DependentUpon>FrmVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\FrmListadoDato.resx">
+      <DependentUpon>FrmListadoDato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\FrmListadoFechas.resx">
+      <DependentUpon>FrmListadoFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\FrmListadoSimple.resx">
+      <DependentUpon>FrmListadoSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -116,5 +116,28 @@ namespace ClaseBase.BD
 
             return dt;
         }
+
+
+        ///////////////////////////////////AGREGADO 29/5 //////////////////////////////////////////////////////
+
+        public static DataTable cliente_apellido() {
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "cliente_apellido";
+            //  cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }
