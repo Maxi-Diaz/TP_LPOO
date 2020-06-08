@@ -161,11 +161,6 @@ namespace Vistas
             AbrirFormInPanel(new FrmUsuario());
         }
 
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnListado_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new FrmListadoVentas());
@@ -179,6 +174,11 @@ namespace Vistas
         private void fecha_t_Tick(object sender, EventArgs e)
         {
             lbfecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FrmModiUsuario());
         }
     }
 }

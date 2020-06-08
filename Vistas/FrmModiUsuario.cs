@@ -30,6 +30,10 @@ namespace Vistas
             cmbRol.DataSource = UsuarioABM.cargar_roles();
         }
 
+        private void cargarFormulario(String user, string pwd)
+        {
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();

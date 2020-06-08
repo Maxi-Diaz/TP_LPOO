@@ -46,9 +46,13 @@
             // btn_cancelar
             // 
             this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_cancelar.Location = new System.Drawing.Point(242, 264);
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btn_cancelar.FlatAppearance.BorderSize = 2;
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.Location = new System.Drawing.Point(250, 291);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancelar.Size = new System.Drawing.Size(98, 34);
             this.btn_cancelar.TabIndex = 23;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
@@ -57,9 +61,13 @@
             // btn_aceptar
             // 
             this.btn_aceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_aceptar.Location = new System.Drawing.Point(134, 264);
+            this.btn_aceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btn_aceptar.FlatAppearance.BorderSize = 2;
+            this.btn_aceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_aceptar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aceptar.Location = new System.Drawing.Point(126, 291);
             this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
+            this.btn_aceptar.Size = new System.Drawing.Size(98, 34);
             this.btn_aceptar.TabIndex = 22;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
@@ -68,7 +76,7 @@
             // tbx_telefono
             // 
             this.tbx_telefono.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbx_telefono.Location = new System.Drawing.Point(228, 212);
+            this.tbx_telefono.Location = new System.Drawing.Point(233, 239);
             this.tbx_telefono.Name = "tbx_telefono";
             this.tbx_telefono.Size = new System.Drawing.Size(100, 20);
             this.tbx_telefono.TabIndex = 21;
@@ -76,7 +84,7 @@
             // tbx_direccion
             // 
             this.tbx_direccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbx_direccion.Location = new System.Drawing.Point(228, 169);
+            this.tbx_direccion.Location = new System.Drawing.Point(233, 196);
             this.tbx_direccion.Name = "tbx_direccion";
             this.tbx_direccion.Size = new System.Drawing.Size(100, 20);
             this.tbx_direccion.TabIndex = 20;
@@ -84,7 +92,7 @@
             // tbx_apellido
             // 
             this.tbx_apellido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbx_apellido.Location = new System.Drawing.Point(228, 129);
+            this.tbx_apellido.Location = new System.Drawing.Point(233, 156);
             this.tbx_apellido.Name = "tbx_apellido";
             this.tbx_apellido.Size = new System.Drawing.Size(100, 20);
             this.tbx_apellido.TabIndex = 19;
@@ -92,7 +100,7 @@
             // tbx_nombre
             // 
             this.tbx_nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbx_nombre.Location = new System.Drawing.Point(228, 90);
+            this.tbx_nombre.Location = new System.Drawing.Point(233, 117);
             this.tbx_nombre.Name = "tbx_nombre";
             this.tbx_nombre.Size = new System.Drawing.Size(100, 20);
             this.tbx_nombre.TabIndex = 18;
@@ -100,7 +108,7 @@
             // tbx_dni
             // 
             this.tbx_dni.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbx_dni.Location = new System.Drawing.Point(228, 57);
+            this.tbx_dni.Location = new System.Drawing.Point(233, 84);
             this.tbx_dni.Name = "tbx_dni";
             this.tbx_dni.Size = new System.Drawing.Size(100, 20);
             this.tbx_dni.TabIndex = 17;
@@ -110,7 +118,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(118, 216);
+            this.label5.Location = new System.Drawing.Point(123, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 16;
@@ -120,7 +128,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 173);
+            this.label4.Location = new System.Drawing.Point(123, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 15;
@@ -130,7 +138,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 133);
+            this.label3.Location = new System.Drawing.Point(123, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 14;
@@ -140,7 +148,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 94);
+            this.label2.Location = new System.Drawing.Point(123, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 13;
@@ -150,7 +158,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 61);
+            this.label1.Location = new System.Drawing.Point(123, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 12;
@@ -159,8 +167,8 @@
             // lbl_title
             // 
             this.lbl_title.AutoSize = true;
-            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_title.Location = new System.Drawing.Point(187, 9);
+            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.Location = new System.Drawing.Point(187, 34);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(73, 20);
             this.lbl_title.TabIndex = 24;
@@ -170,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 344);
+            this.ClientSize = new System.Drawing.Size(457, 349);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);

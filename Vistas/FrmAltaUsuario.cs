@@ -57,6 +57,10 @@ namespace Vistas
                 UsuarioABM.mod_User(user);
                 this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("Complete todos los campos");
+                }
                 
             }
             

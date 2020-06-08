@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.barTitulo = new System.Windows.Forms.Panel();
+            this.lbfecha = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,8 +51,8 @@
             this.iconRestaurar = new System.Windows.Forms.PictureBox();
             this.iconMinimizar = new System.Windows.Forms.PictureBox();
             this.iconCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbfecha = new System.Windows.Forms.Label();
             this.fecha_t = new System.Windows.Forms.Timer(this.components);
             this.barTitulo.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // barTitulo
@@ -78,15 +80,32 @@
             this.barTitulo.TabIndex = 1;
             this.barTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // lbfecha
+            // 
+            this.lbfecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbfecha.AutoSize = true;
+            this.lbfecha.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfecha.ForeColor = System.Drawing.Color.White;
+            this.lbfecha.Location = new System.Drawing.Point(699, 23);
+            this.lbfecha.Name = "lbfecha";
+            this.lbfecha.Size = new System.Drawing.Size(55, 18);
+            this.lbfecha.TabIndex = 6;
+            this.lbfecha.Text = "Fecha";
+            // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Silver;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 2;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(145)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.btnCerrarSesion.Location = new System.Drawing.Point(13, 14);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(116, 36);
-            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.Size = new System.Drawing.Size(104, 36);
+            this.btnCerrarSesion.TabIndex = 8;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // panelPrincipal
@@ -98,7 +117,7 @@
             this.panelPrincipal.Controls.Add(this.pictureBox1);
             this.panelPrincipal.Location = new System.Drawing.Point(0, 67);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(950, 513);
+            this.panelPrincipal.Size = new System.Drawing.Size(950, 538);
             this.panelPrincipal.TabIndex = 2;
             // 
             // pictureBox1
@@ -106,7 +125,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Vistas.Properties.Resources.logo_Agencia;
-            this.pictureBox1.Location = new System.Drawing.Point(332, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(332, 109);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(287, 321);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,9 +176,9 @@
             this.btnReporte.Location = new System.Drawing.Point(0, 473);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(15);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(200, 55);
+            this.btnReporte.Size = new System.Drawing.Size(200, 50);
             this.btnReporte.TabIndex = 7;
-            this.btnReporte.Text = "Reportes";
+            this.btnReporte.Text = "Configuracion";
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
@@ -172,6 +191,8 @@
             this.btnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSistema.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSistema.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSistema.Image = global::Vistas.Properties.Resources.empleados;
+            this.btnSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSistema.Location = new System.Drawing.Point(0, 418);
             this.btnSistema.Margin = new System.Windows.Forms.Padding(15);
             this.btnSistema.Name = "btnSistema";
@@ -190,6 +211,8 @@
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCliente.Image = global::Vistas.Properties.Resources.clientes;
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCliente.Location = new System.Drawing.Point(0, 363);
             this.btnCliente.Margin = new System.Windows.Forms.Padding(15);
             this.btnCliente.Name = "btnCliente";
@@ -208,6 +231,8 @@
             this.btnVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehiculo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehiculo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVehiculo.Image = global::Vistas.Properties.Resources.compras;
+            this.btnVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculo.Location = new System.Drawing.Point(0, 308);
             this.btnVehiculo.Margin = new System.Windows.Forms.Padding(15);
             this.btnVehiculo.Name = "btnVehiculo";
@@ -238,6 +263,8 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNuevo.Image = global::Vistas.Properties.Resources.pagos;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.Location = new System.Drawing.Point(0, 36);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(15);
             this.btnNuevo.Name = "btnNuevo";
@@ -258,6 +285,8 @@
             this.btnListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnListado.Image = global::Vistas.Properties.Resources.reportes;
+            this.btnListado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnListado.Location = new System.Drawing.Point(0, 0);
             this.btnListado.Margin = new System.Windows.Forms.Padding(15);
             this.btnListado.Name = "btnListado";
@@ -278,6 +307,8 @@
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVentas.Image = global::Vistas.Properties.Resources.venta;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Location = new System.Drawing.Point(0, 180);
             this.btnVentas.Margin = new System.Windows.Forms.Padding(15);
             this.btnVentas.Name = "btnVentas";
@@ -296,6 +327,7 @@
             this.pLogo.Controls.Add(this.iconRestaurar);
             this.pLogo.Controls.Add(this.iconMinimizar);
             this.pLogo.Controls.Add(this.iconCerrar);
+            this.pLogo.Controls.Add(this.pictureBox2);
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
             this.pLogo.Name = "pLogo";
@@ -305,23 +337,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(5, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 22);
+            this.label1.Size = new System.Drawing.Size(126, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "BIENVENIDO:";
             // 
             // lblLogueado
             // 
-            this.lblLogueado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLogueado.AutoSize = true;
             this.lblLogueado.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogueado.ForeColor = System.Drawing.Color.White;
-            this.lblLogueado.Location = new System.Drawing.Point(6, 102);
+            this.lblLogueado.Location = new System.Drawing.Point(71, 104);
             this.lblLogueado.Name = "lblLogueado";
             this.lblLogueado.Size = new System.Drawing.Size(64, 18);
             this.lblLogueado.TabIndex = 4;
@@ -380,27 +409,25 @@
             this.iconCerrar.TabStop = false;
             this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Vistas.Properties.Resources.persona;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 90);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(62, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(0, 584);
+            this.panel1.Location = new System.Drawing.Point(0, 602);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 66);
+            this.panel1.Size = new System.Drawing.Size(950, 48);
             this.panel1.TabIndex = 3;
-            // 
-            // lbfecha
-            // 
-            this.lbfecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbfecha.AutoSize = true;
-            this.lbfecha.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbfecha.ForeColor = System.Drawing.Color.White;
-            this.lbfecha.Location = new System.Drawing.Point(699, 23);
-            this.lbfecha.Name = "lbfecha";
-            this.lbfecha.Size = new System.Drawing.Size(55, 18);
-            this.lbfecha.TabIndex = 6;
-            this.lbfecha.Text = "Fecha";
             // 
             // fecha_t
             // 
@@ -436,6 +463,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -466,6 +494,7 @@
         private System.Windows.Forms.Label lblLogueado;
         private System.Windows.Forms.Label lbfecha;
         private System.Windows.Forms.Timer fecha_t;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

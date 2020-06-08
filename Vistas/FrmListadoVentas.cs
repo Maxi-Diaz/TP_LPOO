@@ -103,11 +103,5 @@ namespace Vistas
             lbl_registro.Text = lbl_registro.Text + " " + "Total Anuladas: " + anulada + "  |  ";
             lbl_registro.Text = lbl_registro.Text + " " + "Importe Total: $" + importe;
         }
-
-        private void FrmListadoVentas_Load( object sender, EventArgs e ) {
-            
-            
-        }
-
     }
 }

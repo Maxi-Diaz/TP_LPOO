@@ -49,7 +49,6 @@ namespace Vistas
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            
             FrmMenu FrmMenu = new FrmMenu(txtUser.Text, txtPass.Text);
             Validaciones login = new Validaciones();
 
