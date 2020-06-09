@@ -209,29 +209,6 @@ namespace ClaseBase.BD
             Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value).Trim();
             Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value).Trim();
             Importe_total = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
-            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-
-            //SqlDataAdapter da = new SqlDataAdapter();
-            //da.SelectCommand = new SqlCommand();
-            //da.SelectCommand.Connection = cnn;
-            //da.SelectCommand.CommandText = "SPBuscarMarcaVenta";
-            //da.SelectCommand.CommandType = CommandType.StoredProcedure;
-
-            //SqlParameter param;
-            //param = new SqlParameter("@mar", SqlDbType.VarChar);
-            //param.Direction = ParameterDirection.Input;
-            //param.Value = sPattern;
-
-            //da.SelectCommand.Parameters.Add(param);
-
-            //DataSet ds = new DataSet();
-
-            //DataTable dt = new DataTable();
-            //da.Fill(ds, "View_Venta");
-
-            //dt = ds.Tables[0];
-
-            //return dt;
         }
 
         public static void insertVenta(Venta venta)
@@ -265,7 +242,6 @@ namespace ClaseBase.BD
             SqlCommand cmd = new SqlCommand();
 
             cmd.CommandText = "anular_venta";
-            // cmd.CommandType = CommandType.Text;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
@@ -369,29 +345,6 @@ namespace ClaseBase.BD
             Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value).Trim();
             Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value).Trim();
             Importe_total = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
-            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = "venta_Cliente";
-            //// cmd.CommandType = CommandType.Text;
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Connection = cnn;
-
-            //SqlParameter param;
-            //param = new SqlParameter("@cli", SqlDbType.VarChar);
-            //param.Direction = ParameterDirection.Input;
-            //param.Value = cli;
-
-
-            //// Ejecuta la consulta
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //da.SelectCommand.Parameters.Add(param);
-            //// Llena los datos de la consulta en el DataTable
-
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-
-            //return dt;
         }
 
         public void list_Fecha(DateTime inicio, DateTime final) {
@@ -443,31 +396,6 @@ namespace ClaseBase.BD
             Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value).Trim();
             Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value).Trim();
             Importe_total = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
-            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = "venta_Fechas";
-            //// cmd.CommandType = CommandType.Text;
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Connection = cnn;
-
-            ///*  SqlParameter param;
-            //  param = new SqlParameter("@primeraFecha", SqlDbType.DateTime);
-            //  param.Direction = ParameterDirection.Input;
-            //  param.Value = inicio;*/
-
-            //cmd.Parameters.AddWithValue("@primeraFecha", inicio);
-            //cmd.Parameters.AddWithValue("@segundaFecha", final);
-            //// Ejecuta la consulta
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            ////  da.SelectCommand.Parameters.Add(param);
-            //// Llena los datos de la consulta en el DataTable
-
-
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-
-            //return dt;
         }
 
 

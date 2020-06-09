@@ -44,36 +44,11 @@ namespace ClaseBase.BD
             cmd.ExecuteNonQuery();
 
             cnn.Close();
-            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = "INSERT INTO Usuario(usu_nombreUsuario,usu_contrasenia,usu_apellidoNombre,rol_codigo) values(@name,@pwd,@ayp,@rol)";
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Connection = cnn;
-
-            //cmd.Parameters.AddWithValue("@rol", usuario.Rol_Codigo);
-            //cmd.Parameters.AddWithValue("@name", usuario.Usr_NombreUsuario);
-            //cmd.Parameters.AddWithValue("@pwd", usuario.Usr_Contrasenia);
-            //cmd.Parameters.AddWithValue("@ayp", usuario.Usr_ApellidoNombre);
-
-            //cnn.Open();
-            //cmd.ExecuteNonQuery();
-            //cnn.Close();
         }
 
         public static DataTable cargarUsuarios()
         {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = "SELECT";
-            //cmd.CommandText += " rol_descripcion as 'Rol', ";
-            //cmd.CommandText += " usu_nombreUsuario as 'Usuario', ";
-            //cmd.CommandText += " usu_contrasenia as 'Contraseña', ";
-            //cmd.CommandText += " usu_apellidoNombre as 'Nombre', ";
-            //cmd.CommandText += " usu_id as 'Rol Usuario' , U.rol_codigo as 'Rol' ";
-            //cmd.CommandText += " FROM Usuario as U ";
-            //cmd.CommandText += " LEFT JOIN Rol as R ON (R.rol_codigo=U.rol_codigo) ";
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Connection = cnn;
 
             //Ejecuta la consulta.
             SqlDataAdapter da = new SqlDataAdapter();
@@ -138,26 +113,6 @@ namespace ClaseBase.BD
             cmd.ExecuteNonQuery();
 
             cnn.Close();
-            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = " UPDATE Usuario SET usu_apellidoNombre = @ayp , ";
-            //cmd.CommandText += " usu_nombreUsuario = @name , usu_contrasenia = @pwd, ";
-            //cmd.CommandText += " rol_codigo = @rol ";
-            //cmd.CommandText += " WHERE ";
-            //cmd.CommandText += " usu_id = @idU ";
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Connection = cnn;
-
-            //cmd.Parameters.AddWithValue("@idU", usuario.Usr_Id);
-            //cmd.Parameters.AddWithValue("@rol", usuario.Rol_Codigo);
-            //cmd.Parameters.AddWithValue("@name", usuario.Usr_NombreUsuario);
-            //cmd.Parameters.AddWithValue("@pwd", usuario.Usr_Contrasenia);
-            //cmd.Parameters.AddWithValue("@ayp", usuario.Usr_ApellidoNombre);
-
-            //cnn.Open();
-            //cmd.ExecuteNonQuery();
-            //cnn.Close();
-
         }
 
         public static void borrarUsuario(Usuario usuario)
@@ -175,19 +130,6 @@ namespace ClaseBase.BD
             cmd.ExecuteNonQuery();
 
             cnn.Close();
-            //SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = " DELETE FROM Usuario ";
-            //cmd.CommandText += " WHERE ";
-            //cmd.CommandText += " usu_id = @idU ";
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Connection = cnn;
-
-            //cmd.Parameters.AddWithValue("@idU", usuario.Usr_Id);
-
-            //cnn.Open();
-            //cmd.ExecuteNonQuery();
-            //cnn.Close();
         }
 
         public static Boolean admin(String band)

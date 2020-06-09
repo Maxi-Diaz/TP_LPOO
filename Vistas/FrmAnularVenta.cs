@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ClaseBase.BD;
+using ClaseBase;
 
 namespace Vistas {
     public partial class FrmAnularVenta: Form {
@@ -14,13 +15,14 @@ namespace Vistas {
             InitializeComponent();
         }
 
-        private void FrmAnularVenta_Load( object sender, EventArgs e ) {
-
-        }
-
         private void btn_aceptar_Click( object sender, EventArgs e ) {
-            VentasABM.anular_venta(int.Parse(txt_id.Text.ToString()));
-            this.Close();
+            if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Venta Oventa = new Venta();
+                Oventa.Vta_Id = Convert.ToInt32(txt_id.Text);
+                VentasABM.anular_venta(int.Parse(txt_id.Text.ToString()));
+                //this.Close();
+            }
         }
     }
 }

@@ -76,7 +76,7 @@
             this.progressBar1.ForeColor = System.Drawing.Color.White;
             this.progressBar1.Location = new System.Drawing.Point(26, 226);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(403, 23);
+            this.progressBar1.Size = new System.Drawing.Size(418, 23);
             this.progressBar1.TabIndex = 4;
             // 
             // fBienvenida
