@@ -50,5 +50,12 @@ namespace ClaseBase
         public Usuario()
         {
         }
+
+        private Boolean usr_Estado;
+
+        public Boolean Usr_Estado {
+            get { return usr_Estado; }
+            set { usr_Estado = value; }
+        }
     }
 }

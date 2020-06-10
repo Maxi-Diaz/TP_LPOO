@@ -42,36 +42,36 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClaseBase.dll" size="25088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClaseBase.dll" size="26112">
       <assemblyIdentity name="ClaseBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KIPVNQogwrHWohWvJQ2uoL0fhsg=</dsig:DigestValue>
+        <dsig:DigestValue>NIy0sSQju0qek05fAH6HYRM+cFI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="230912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="239104">
       <assemblyIdentity name="Vistas" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2E76mgyb6c7Gv7QDoRb1EaVN4GU=</dsig:DigestValue>
+        <dsig:DigestValue>U+UfjiOAeoXZ5WZhfh830ihu7wE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Vistas.exe.config" size="465">
+  <file name="Vistas.exe.config" size="470">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>eN2oPVAZCzW/T23jlOXNL7TvGD0=</dsig:DigestValue>
+      <dsig:DigestValue>GO2Ueyy9XH8Z+szTHsvAgaeQVjY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

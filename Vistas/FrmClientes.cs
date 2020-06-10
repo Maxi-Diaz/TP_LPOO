@@ -41,7 +41,7 @@ namespace Vistas
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (tblCliente.SelectedRows.Count > 0)
+            if (tblCliente.CurrentRow != null)
             {
                 //FrmModiCliente frm = new FrmModiCliente();
                 FrmAltaCliente frm = new FrmAltaCliente();
@@ -62,7 +62,7 @@ namespace Vistas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (tblCliente.SelectedRows.Count > 0)
+            if (tblCliente.CurrentRow != null)
             {
                 Cliente cliente = new Cliente();
                 cliente.Cli_Dni = tblCliente.CurrentRow.Cells["DNI"].Value.ToString();

@@ -26,7 +26,7 @@ namespace ClaseBase.BD {
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            if (dt.Rows.Count == 1)
+            if (dt.Rows.Count == 1 && (dt.Rows[0][1].ToString() == "True"))
             {
                 if (dt.Rows[0][0].ToString() == "1")
                 {

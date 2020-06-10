@@ -36,6 +36,7 @@ namespace ClaseBase.BD
             cmd.Parameters.Add("@pwd", SqlDbType.VarChar).Value = usuario.Usr_Contrasenia;
             cmd.Parameters.Add("@ayp", SqlDbType.VarChar).Value = usuario.Usr_ApellidoNombre;
             cmd.Parameters.Add("@rol", SqlDbType.Int).Value = usuario.Rol_Codigo;
+            cmd.Parameters.Add("@est", SqlDbType.Int).Value = usuario.Usr_Estado;
 
             cmd.Connection = cnn;
 
@@ -105,7 +106,7 @@ namespace ClaseBase.BD
             cmd.Parameters.Add("@pwd", SqlDbType.VarChar).Value = usuario.Usr_Contrasenia;
             cmd.Parameters.Add("@rol", SqlDbType.Int).Value = usuario.Rol_Codigo;
             cmd.Parameters.Add("@idU", SqlDbType.Int).Value = usuario.Usr_Id;
-
+            cmd.Parameters.Add("@est", SqlDbType.Int).Value = usuario.Usr_Estado;
             cmd.Connection = cnn;
 
             cnn.Open();
@@ -193,6 +194,49 @@ namespace ClaseBase.BD
             {
                 return true;
             }
+        }
+
+        public static int usuario_existente(string username) {
+
+            int cantidad_usuario;
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "usuario_existente";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Connection = cnn;
+            /*
+            // Parametro de Entrada
+            cmd.Parameters.AddWithValue("@username", username);
+
+            // Parametro de Salida
+            cmd.Parameters.Add("@existe", SqlDbType.Int);
+            cmd.Parameters["@existe"].Direction = ParameterDirection.Output;
+
+            */
+            SqlParameter param;
+            param = new SqlParameter("@username", SqlDbType.VarChar);
+            param.Direction = ParameterDirection.Input;
+            param.Value = username;
+            cmd.Parameters.Add(param);
+
+            param = new SqlParameter("@existe", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+
+            // Obtengo el valor del Parametro de Salida
+            cantidad_usuario = (int)cmd.Parameters["@existe"].Value;
+
+            return cantidad_usuario;
+
         }
     }
 }
