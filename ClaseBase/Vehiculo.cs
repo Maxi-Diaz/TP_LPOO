@@ -91,5 +91,12 @@ namespace ClaseBase
             get { return veh_ID; }
             set { veh_ID = value; }
         }
+
+        private bool veh_Estado;
+
+        public bool Veh_Estado {
+            get { return veh_Estado; }
+            set { veh_Estado = value; }
+        }
     }
 }
