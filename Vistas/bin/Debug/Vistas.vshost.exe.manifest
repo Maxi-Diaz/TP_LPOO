@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClaseBase.dll" size="26112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClaseBase.dll" size="26624">
       <assemblyIdentity name="ClaseBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>NIy0sSQju0qek05fAH6HYRM+cFI=</dsig:DigestValue>
+        <dsig:DigestValue>vp6uHjCS4P3QTBudSd6YnAj+eTw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="239104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="240128">
       <assemblyIdentity name="Vistas" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>U+UfjiOAeoXZ5WZhfh830ihu7wE=</dsig:DigestValue>
+        <dsig:DigestValue>j08/NmJtOpwvNCHJMa584xU7WVQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

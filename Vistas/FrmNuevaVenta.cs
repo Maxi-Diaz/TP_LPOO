@@ -26,7 +26,7 @@ namespace Vistas
         {
             cmbCliente.DisplayMember = "Cliente";
             cmbCliente.ValueMember = "cli_id";
-            cmbCliente.DataSource = VentasABM.list_cliente();
+            cmbCliente.DataSource = ClienteABM.list_cliente();
         }
 
 
@@ -34,10 +34,12 @@ namespace Vistas
         {
             cmbVehiculo.DisplayMember = "veh_datos";
             cmbVehiculo.ValueMember = "veh_id";
-            cmbVehiculo.DataSource = VentasABM.list_vehiculos();
+            cmbVehiculo.DataSource = VehiculoABM.list_Vehiculos_disponible();
 
         }
-
+        /// <summary>
+        /// ////////Cambiar a FORMAPAGO AMB
+        /// </summary>
         private void load_combo_formaPago()
         {
             cmbPago.DisplayMember = "pag_Forma";
@@ -49,7 +51,7 @@ namespace Vistas
         {
             cmbVendedor.DisplayMember = "usu_apellidoNombre";
             cmbVendedor.ValueMember = "usu_id";
-            cmbVendedor.DataSource = VentasABM.set_vendedor(user, pwd);
+            cmbVendedor.DataSource = UsuarioABM.set_vendedor(user, pwd);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -84,6 +86,11 @@ namespace Vistas
 
                 VentasABM.insertVenta(oVenta);
                 MessageBox.Show("Venta Registrada!");
+                Vehiculo oVehiculo = new Vehiculo();
+                oVehiculo.Veh_ID = oVenta.Veh_Id;
+                oVehiculo.Veh_Estado = false;
+                VehiculoABM.venderVehiculo(oVehiculo);
+                load_combo_vehiculos();
             }
             catch (Exception a)
             {

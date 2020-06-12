@@ -38,7 +38,7 @@ namespace Vistas {
         private void load_combo_marca() {
             cmbMarca.DisplayMember = "mar_Nombre";
             cmbMarca.ValueMember = "mar_ID";
-            cmbMarca.DataSource = VehiculoABM.list_Marca();
+            cmbMarca.DataSource = MarcaABM.list_Marca();
         }
 
         private void cmbMarca_TextChanged(object sender, EventArgs e) {
@@ -59,7 +59,7 @@ namespace Vistas {
         private void load_combo_linea(int id) {
             cmbLinea.DisplayMember = "lin_Nombre";
             cmbLinea.ValueMember = "lin_ID";
-            cmbLinea.DataSource = VehiculoABM.list_Linea(id);
+            cmbLinea.DataSource = LineaABM.list_Linea(id);
         }
         private void btnGuardar_Click(object sender, EventArgs e) {
             switch (opcion) {
@@ -124,6 +124,7 @@ namespace Vistas {
                 oVehiculo.Tip_ID = int.Parse(cmb_tipo.SelectedValue.ToString());
                 oVehiculo.Cls_ID = int.Parse(cmb_clase.SelectedValue.ToString());
                 oVehiculo.Veh_Precio = Convert.ToDecimal(txtPrecio.Text);
+                oVehiculo.Veh_Estado = true;
 
 
 
@@ -157,7 +158,7 @@ namespace Vistas {
                 oVehiculo.Tip_ID = int.Parse(cmb_tipo.SelectedValue.ToString());
                 oVehiculo.Cls_ID = int.Parse(cmb_clase.SelectedValue.ToString());
                 oVehiculo.Veh_Precio = Convert.ToDecimal(txtPrecio.Text);
-
+                oVehiculo.Veh_Estado = true;
 
                 VehiculoABM.editarVehiculo(oVehiculo);
                 MessageBox.Show("Vehiculo Modificado!");

@@ -22,9 +22,10 @@ namespace Vistas
 
         private void Cargar() {
             dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos();
-            dgvVehiculos.Columns[11].Visible = false;
             dgvVehiculos.Columns[12].Visible = false;
             dgvVehiculos.Columns[13].Visible = false;
+            dgvVehiculos.Columns[14].Visible = false;
+            dgvVehiculos.Columns[15].Visible = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e) {
@@ -83,9 +84,20 @@ namespace Vistas
                 vehiculo.Tip_ID = int.Parse(dgvVehiculos.CurrentRow.Cells["tip_ID"].Value.ToString());
                 vehiculo.Cls_ID = int.Parse(dgvVehiculos.CurrentRow.Cells["cls_ID"].Value.ToString());
                 vehiculo.Veh_Precio = Convert.ToDecimal(dgvVehiculos.CurrentRow.Cells["Precio"].Value.ToString());
-                if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                if (dgvVehiculos.CurrentRow.Cells["Estado"].Value.ToString() == "DISPONIBLE") {
+                    vehiculo.Veh_Estado = true;
+                }
+                else {
+                    vehiculo.Veh_Estado = false;
+                }
+                if(vehiculo.Veh_Estado == true){
+                     if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
                     eliminar(vehiculo);
                 }
+                }else{
+                    MessageBox.Show("El Vehiculo esta Vendido no se puede eliminar!");
+                }
+               
                 
 
             }
@@ -129,30 +141,6 @@ namespace Vistas
         
         }
 
-     /*   private void dgvVehiculos_CurrentCellChanged(object sender, EventArgs e) {
-            if (dgvVehiculos.CurrentRow != null) {
-
-                vehiculo.Veh_ID = Convert.ToInt32(dgvVehiculos.CurrentRow.Cells["ID Vehiculo"].Value.ToString());
-                vehiculo.Veh_Matricula = dgvVehiculos.CurrentRow.Cells["Matricula"].Value.ToString();
-                //  cmbMarca.SelectedValue = dgvVehiculos.CurrentRow.Cells["ID Marca"].Value.ToString();
-                vehiculo.Lin_Id = Convert.ToInt32(dgvVehiculos.CurrentRow.Cells["ID Linea"].Value.ToString());
-                vehiculo.Veh_Modelo = Convert.ToInt32(dgvVehiculos.CurrentRow.Cells["Modelo"].Value.ToString());
-                vehiculo.Veh_Color = dgvVehiculos.CurrentRow.Cells["Color"].Value.ToString();
-                vehiculo.Veh_Puerta = Convert.ToInt32(dgvVehiculos.CurrentRow.Cells["Puertas"].Value.ToString());
-
-                if (dgvVehiculos.CurrentRow.Cells["GPS"].Value.ToString() == "True") {
-                    vehiculo.Veh_GPS = true;
-                }
-                else {
-                    vehiculo.Veh_GPS = false;
-                }
-                vehiculo.Veh_TipoVehiculo = dgvVehiculos.CurrentRow.Cells["Tipo"].Value.ToString();
-                vehiculo.Veh_ClaseVehiculo = dgvVehiculos.CurrentRow.Cells["Clase"].Value.ToString();
-                vehiculo.Veh_Precio = Convert.ToDecimal(dgvVehiculos.CurrentRow.Cells["Precio"].Value.ToString());
-
-
-
-            }
-        }*/
+    
     
 }

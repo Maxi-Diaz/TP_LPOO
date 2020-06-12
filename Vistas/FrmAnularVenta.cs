@@ -15,13 +15,26 @@ namespace Vistas {
             InitializeComponent();
         }
 
-        private void btn_aceptar_Click( object sender, EventArgs e ) {
-            if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                Venta Oventa = new Venta();
-                Oventa.Vta_Id = Convert.ToInt32(txt_id.Text);
-                VentasABM.anular_venta(int.Parse(txt_id.Text.ToString()));
-                //this.Close();
+        private void btn_aceptar_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                try {
+                    Venta Oventa = new Venta();
+                    Oventa.Vta_Id = Convert.ToInt32(txt_id.Text);
+                    VentasABM.anular_venta(int.Parse(txt_id.Text.ToString()));
+                    Vehiculo oVehiculo = new Vehiculo();
+                    oVehiculo.Veh_ID = Convert.ToInt32(txtVehID.Text.ToString());
+                    oVehiculo.Veh_Estado = true;
+                    VehiculoABM.venderVehiculo(oVehiculo);
+                    MessageBox.Show("Venta Anulada!");
+                    //this.Close();
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("No se pudo Anular!");
+
+                }
+
+
             }
         }
     }

@@ -138,6 +138,23 @@ namespace ClaseBase.BD
             return dt;
         }
 
+        public static DataTable list_cliente() {
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT cli_ID, Apellido+' '+Nombre+' DNI '+ DNI AS Cliente FROM View_Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }

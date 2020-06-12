@@ -26,6 +26,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.txtVehID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,11 +58,20 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // txtVehID
+            // 
+            this.txtVehID.Location = new System.Drawing.Point(160, 116);
+            this.txtVehID.Name = "txtVehID";
+            this.txtVehID.Size = new System.Drawing.Size(100, 20);
+            this.txtVehID.TabIndex = 3;
+            this.txtVehID.Visible = false;
+            // 
             // FrmAnularVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 138);
+            this.Controls.Add(this.txtVehID);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label1);
@@ -78,5 +88,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_aceptar;
         public System.Windows.Forms.TextBox txt_id;
+        public System.Windows.Forms.TextBox txtVehID;
     }
 }

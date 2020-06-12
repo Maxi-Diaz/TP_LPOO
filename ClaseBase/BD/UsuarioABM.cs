@@ -238,5 +238,27 @@ namespace ClaseBase.BD
             return cantidad_usuario;
 
         }
+
+        public static DataTable set_vendedor(string user, string pwd) {
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = " SELECT * FROM Usuario ";
+            cmd.CommandText += " WHERE usu_nombreUsuario = @user AND ";
+            cmd.CommandText += " usu_contrasenia = @pwd ";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@user", user);
+            cmd.Parameters.AddWithValue("@pwd", pwd);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

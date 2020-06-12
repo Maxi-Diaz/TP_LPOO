@@ -27,7 +27,7 @@ namespace Vistas
         private void load_combo_clientes() {
             cmbClientes.DisplayMember = "Cliente";
             cmbClientes.ValueMember = "Cliente";
-            cmbClientes.DataSource = VentasABM.list_cliente();
+            cmbClientes.DataSource = ClienteABM.list_cliente();
         }
 
         public void cargar()
@@ -36,6 +36,7 @@ namespace Vistas
             this.ventas.list_venta();
             cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
             tbListaVentas.DataSource = ventas.Tabla;
+            tbListaVentas.Columns[9].Visible = false;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace Vistas
             if (tbListaVentas.SelectedRows.Count > 0)
             {
                 frm.txt_id.Text = tbListaVentas.CurrentRow.Cells["ID"].Value.ToString();
+                frm.txtVehID.Text = tbListaVentas.CurrentRow.Cells["veh_ID"].Value.ToString();
                 frm.ShowDialog();
                 cargar();
             }

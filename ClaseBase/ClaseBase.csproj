@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD\ClienteABM.cs" />
+    <Compile Include="BD\LineaABM.cs" />
     <Compile Include="BD\ListaABM.cs" />
     <Compile Include="BD\MarcaABM.cs" />
     <Compile Include="BD\UsuarioABM.cs" />

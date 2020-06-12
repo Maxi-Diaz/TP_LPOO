@@ -54,23 +54,7 @@ namespace ClaseBase.BD
             }
         }
 
-        public static DataTable list_cliente()
-        {
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT cli_ID, Apellido+' '+Nombre+' DNI '+ DNI AS Cliente FROM View_Cliente";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-
-            // Ejecuta la consulta
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            // Llena los datos de la consulta en el DataTable
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            return dt;
-        }
+       
 
 
         public static DataTable list_vehiculos()
@@ -142,28 +126,7 @@ namespace ClaseBase.BD
 
 
         }
-        public static DataTable set_vendedor(string user, string pwd)
-        {
-
-            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = " SELECT * FROM Usuario ";
-            cmd.CommandText += " WHERE usu_nombreUsuario = @user AND ";
-            cmd.CommandText += " usu_contrasenia = @pwd ";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-
-            cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@pwd", pwd);
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            return dt;
-        }
+        
 
         public void buscarMarcaVenta( string sPattern ) {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
