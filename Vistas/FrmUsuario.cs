@@ -80,7 +80,6 @@ namespace Vistas
         {
             if (tblUsuario.CurrentRow != null)
             {
-                //FrmModiUsuario frm = new FrmModiUsuario();
                 FrmAltaUsuario frm = new FrmAltaUsuario();
                 frm.lbl_title.Text = "Modificar";
                 frm.txtId.Visible = true;

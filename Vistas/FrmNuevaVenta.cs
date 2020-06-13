@@ -56,10 +56,19 @@ namespace Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea Registrar la venta?", "Peligro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            DateTime fechaActal = DateTime.Today;
+            if (dtmFecha.Value > fechaActal)
             {
-                agregar();
-                limpiarCampos();
+                if (MessageBox.Show("Desea Registrar la venta?", "Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    agregar();
+                    limpiarCampos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tiene que ser una fecha actualizada","Importante",MessageBoxButtons.OK , MessageBoxIcon.Information);
             }
         }
 
@@ -70,10 +79,10 @@ namespace Vistas
 
         private void agregar()
         {
+
             try
             {
                 Venta oVenta = new Venta();
-
                 oVenta.Cli_Id = (int)cmbCliente.SelectedValue;
                 oVenta.Veh_Id = (int)cmbVehiculo.SelectedValue;
                 oVenta.Usr_Id = (int)cmbCliente.SelectedValue;
@@ -81,9 +90,6 @@ namespace Vistas
                 oVenta.Pag_Id = cmbPago.SelectedValue.ToString();
                 oVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
                 oVenta.Vta_Estado = "VALIDADA";
-
-
-
                 VentasABM.insertVenta(oVenta);
                 MessageBox.Show("Venta Registrada!");
                 Vehiculo oVehiculo = new Vehiculo();

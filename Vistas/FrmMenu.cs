@@ -71,7 +71,7 @@ namespace Vistas
             }
         }
 
-        int LX, LY;
+        /*int LX, LY;
         private void iconMaximizar_Click(object sender, EventArgs e)
         {
             LX = this.Location.X;
@@ -88,7 +88,7 @@ namespace Vistas
             this.Location = new Point(LX, LY);
             iconRestaurar.Visible = false;
             iconMaximizar.Visible = true;
-        }
+        }*/
 
         private void iconMinimizar_Click(object sender, EventArgs e)
         {
@@ -134,6 +134,27 @@ namespace Vistas
             }
         }
 
+        private void hideSubMenu2()
+        {
+            if (subMenu2.Visible == true)
+            {
+                subMenu2.Visible = false;
+            }
+        }
+
+        private void showSubMenu2(Panel subMenus)
+        {
+            if (subMenus.Visible == false)
+            {
+                hideSubMenu2();
+                subMenus.Visible = true;
+            }
+            else
+            {
+                subMenus.Visible = false;
+            }
+        }
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Desea cerrar sesion?", "IMPORTANTE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -148,7 +169,7 @@ namespace Vistas
 
         private void btnVehiculo_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FrmVehiculo());
+            showSubMenu2(subMenu2);
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -178,7 +199,23 @@ namespace Vistas
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FrmModiUsuario());
+           
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmModiUsuario frm = new FrmModiUsuario();
+            frm.ShowDialog();
+        }
+
+        private void btnNuevoVeh_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FrmVehiculo());
+        }
+
+        private void btnNuevoGestion_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FrmGestion());
         }
     }
 }

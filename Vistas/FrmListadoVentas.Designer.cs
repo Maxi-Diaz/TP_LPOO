@@ -67,6 +67,7 @@
             this.tbListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(214)))), ((int)(((byte)(171)))));
             this.tbListaVentas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -82,9 +83,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tbListaVentas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tbListaVentas.Location = new System.Drawing.Point(39, 19);
+            this.tbListaVentas.Location = new System.Drawing.Point(12, 19);
             this.tbListaVentas.Name = "tbListaVentas";
-            this.tbListaVentas.Size = new System.Drawing.Size(847, 252);
+            this.tbListaVentas.Size = new System.Drawing.Size(910, 252);
             this.tbListaVentas.TabIndex = 0;
             // 
             // btnCerrar

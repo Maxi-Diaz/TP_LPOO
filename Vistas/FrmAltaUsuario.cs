@@ -32,8 +32,6 @@ namespace Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-           
            
                 if (lbl_title.Text == "Agregar") {
                     if (txtApellido.Text != "" && txtUsuario.Text != "" && txtPass.Text != "") {

@@ -12,15 +12,18 @@ using Vistas.Listados;
 
 namespace Vistas
 {
-    public partial class FrmVehiculo : Form {
-       
-        public FrmVehiculo() {
+    public partial class FrmVehiculo : Form
+    {
+
+        public FrmVehiculo()
+        {
             InitializeComponent();
             Cargar();
         }
 
 
-        private void Cargar() {
+        private void Cargar()
+        {
             dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos();
             dgvVehiculos.Columns[12].Visible = false;
             dgvVehiculos.Columns[13].Visible = false;
@@ -28,16 +31,19 @@ namespace Vistas
             dgvVehiculos.Columns[15].Visible = false;
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e) {
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
             FrmNuevoVehiculo oFrm = new FrmNuevoVehiculo(0);
             oFrm.ShowDialog();
             Cargar();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e) {
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
 
-            
-             if (dgvVehiculos.CurrentRow != null) {
+
+            if (dgvVehiculos.CurrentRow != null)
+            {
                 FrmNuevoVehiculo oFrm = new FrmNuevoVehiculo(1);
                 oFrm.txtID.Text = dgvVehiculos.CurrentRow.Cells["ID"].Value.ToString();
                 oFrm.txtMatricula.Text = dgvVehiculos.CurrentRow.Cells["Matricula"].Value.ToString();
@@ -47,26 +53,27 @@ namespace Vistas
                 oFrm.txtColor.Text = dgvVehiculos.CurrentRow.Cells["Color"].Value.ToString();
                 oFrm.txtPuertas.Text = dgvVehiculos.CurrentRow.Cells["Puertas"].Value.ToString();
 
-                if (dgvVehiculos.CurrentRow.Cells["GPS"].Value.ToString() == "True"){
+                if (dgvVehiculos.CurrentRow.Cells["GPS"].Value.ToString() == "True")
+                {
                     oFrm.chbGPS.Checked = true;
-                }else{
+                }
+                else
+                {
                     oFrm.chbGPS.Checked = false;
                 }
                 oFrm.cmb_tipo.SelectedValue = dgvVehiculos.CurrentRow.Cells["tip_ID"].Value.ToString();
                 oFrm.cmb_clase.SelectedValue = dgvVehiculos.CurrentRow.Cells["cls_ID"].Value.ToString();
                 oFrm.txtPrecio.Text = dgvVehiculos.CurrentRow.Cells["Precio"].Value.ToString();
 
-               oFrm.ShowDialog();
+                oFrm.ShowDialog();
                 Cargar();
             }
+        }
 
-               
-                
-
-            }
-
-        private void btnEliminar_Click(object sender, EventArgs e) {
-            if (dgvVehiculos.CurrentRow != null) {
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvVehiculos.CurrentRow != null)
+            {
                 Vehiculo vehiculo = new Vehiculo();
                 vehiculo.Veh_ID = Convert.ToInt32(dgvVehiculos.CurrentRow.Cells["ID"].Value.ToString());
                 vehiculo.Veh_Matricula = dgvVehiculos.CurrentRow.Cells["Matricula"].Value.ToString();
@@ -75,72 +82,73 @@ namespace Vistas
                 vehiculo.Veh_Color = dgvVehiculos.CurrentRow.Cells["Color"].Value.ToString();
                 vehiculo.Veh_Puerta = Convert.ToInt32(dgvVehiculos.CurrentRow.Cells["Puertas"].Value.ToString());
 
-                if (dgvVehiculos.CurrentRow.Cells["GPS"].Value.ToString() == "True") {
+                if (dgvVehiculos.CurrentRow.Cells["GPS"].Value.ToString() == "True")
+                {
                     vehiculo.Veh_GPS = true;
                 }
-                else {
+                else
+                {
                     vehiculo.Veh_GPS = false;
                 }
                 vehiculo.Tip_ID = int.Parse(dgvVehiculos.CurrentRow.Cells["tip_ID"].Value.ToString());
                 vehiculo.Cls_ID = int.Parse(dgvVehiculos.CurrentRow.Cells["cls_ID"].Value.ToString());
                 vehiculo.Veh_Precio = Convert.ToDecimal(dgvVehiculos.CurrentRow.Cells["Precio"].Value.ToString());
-                if (dgvVehiculos.CurrentRow.Cells["Estado"].Value.ToString() == "DISPONIBLE") {
+                if (dgvVehiculos.CurrentRow.Cells["Estado"].Value.ToString() == "DISPONIBLE")
+                {
                     vehiculo.Veh_Estado = true;
                 }
-                else {
+                else
+                {
                     vehiculo.Veh_Estado = false;
                 }
-                if(vehiculo.Veh_Estado == true){
-                     if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
-                    eliminar(vehiculo);
+                if (vehiculo.Veh_Estado == true)
+                {
+                    if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        eliminar(vehiculo);
+                    }
                 }
-                }else{
+                else
+                {
                     MessageBox.Show("El Vehiculo esta Vendido no se puede eliminar!");
                 }
-               
-                
-
-            }
-            else {
-                
             }
         }
 
-        private void eliminar(Vehiculo oVehiculo) {
-            try {
+        private void eliminar(Vehiculo oVehiculo)
+        {
+            try
+            {
                 VehiculoABM.eliminarVehiculo(oVehiculo);
                 MessageBox.Show("Vehiculo Eliminado!");
                 Cargar();
             }
-            catch (Exception a) {
+            catch (Exception a)
+            {
                 MessageBox.Show("" + a);
                 MessageBox.Show("Vehiculo no Eliminado!");
             }
         }
 
-        private void btnVehiculos_Click(object sender, EventArgs e) {
-              
-            if (rbtnLinea.Checked) {
-                //FrmListadoSimple oFrm = new FrmListadoSimple("Linea");
-                //oFrm.Show();
+        private void btnVehiculos_Click(object sender, EventArgs e)
+        {
+
+            if (rbtnLinea.Checked)
+            {
                 dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos_lm(1);
-            }else {
-                if (rbtnMarca.Checked) {
-                   //FrmListadoSimple oFrm = new FrmListadoSimple("Marca");
-                   // oFrm.Show();
+            }
+            else
+            {
+                if (rbtnMarca.Checked)
+                {
                     dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos_lm(0);
                 }
             }
-              
-
         }
 
-        private void btnBuscar_Click( object sender, EventArgs e ) {
-
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
-        
-        }
-
-    
-    
+    }
 }

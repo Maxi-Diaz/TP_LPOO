@@ -28,6 +28,8 @@ namespace Vistas
             cmbClientes.DisplayMember = "Cliente";
             cmbClientes.ValueMember = "Cliente";
             cmbClientes.DataSource = ClienteABM.list_cliente();
+            //cmbClientes.DataSource = VentasABM.list_cliente();
+            cmbClientes.Text = "Seleccione Cliente";
         }
 
         public void cargar()
@@ -74,6 +76,7 @@ namespace Vistas
             cmbMarca.DisplayMember = "mar_Nombre";
             cmbMarca.ValueMember = "mar_Nombre";
             cmbMarca.DataSource = MarcaABM.list_Marca();
+            cmbMarca.Text = "Seleccione Marca";
         }
 
         private void btn_anuluar_Click( object sender, EventArgs e ) {

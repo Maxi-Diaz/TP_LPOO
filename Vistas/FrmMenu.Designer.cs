@@ -39,12 +39,19 @@
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnSistema = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.subMenu2 = new System.Windows.Forms.Panel();
+            this.btnNuevoGestion = new System.Windows.Forms.Button();
+            this.btnNuevoVeh = new System.Windows.Forms.Button();
             this.btnVehiculo = new System.Windows.Forms.Button();
             this.subMenu = new System.Windows.Forms.Panel();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnListado = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pLogo = new System.Windows.Forms.Panel();
+//<<<<<<< Updated upstream
+//=======
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+//>>>>>>> Stashed changes
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogueado = new System.Windows.Forms.Label();
             this.iconMaximizar = new System.Windows.Forms.PictureBox();
@@ -58,6 +65,7 @@
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pMenu.SuspendLayout();
+            this.subMenu2.SuspendLayout();
             this.subMenu.SuspendLayout();
             this.pLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).BeginInit();
@@ -69,9 +77,15 @@
             // 
             // barTitulo
             // 
+//<<<<<<< Updated upstream
             this.barTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.barTitulo.BackColor = System.Drawing.Color.DarkOrange;
+//=======
+            this.barTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.barTitulo.BackColor = System.Drawing.Color.Orange;
+//>>>>>>> Stashed changes
             this.barTitulo.Controls.Add(this.lbfecha);
             this.barTitulo.Controls.Add(this.btnCerrarSesion);
             this.barTitulo.Location = new System.Drawing.Point(0, 0);
@@ -95,9 +109,10 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.Silver;
+            this.btnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCerrarSesion.FlatAppearance.BorderSize = 2;
-            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(145)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.btnCerrarSesion.Location = new System.Drawing.Point(13, 14);
@@ -124,6 +139,10 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+//<<<<<<< Updated upstream
+//=======
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.logo_Agencia;
+//>>>>>>> Stashed changes
             this.pictureBox1.Location = new System.Drawing.Point(332, 109);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(287, 321);
@@ -137,7 +156,7 @@
             this.lbGrupo.AutoSize = true;
             this.lbGrupo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGrupo.ForeColor = System.Drawing.Color.Transparent;
-            this.lbGrupo.Location = new System.Drawing.Point(22, 602);
+            this.lbGrupo.Location = new System.Drawing.Point(22, 619);
             this.lbGrupo.Name = "lbGrupo";
             this.lbGrupo.Size = new System.Drawing.Size(155, 22);
             this.lbGrupo.TabIndex = 6;
@@ -150,14 +169,15 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.pMenu.AutoScroll = true;
             this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pMenu.Controls.Add(this.lbGrupo);
             this.pMenu.Controls.Add(this.btnReporte);
             this.pMenu.Controls.Add(this.btnSistema);
             this.pMenu.Controls.Add(this.btnCliente);
+            this.pMenu.Controls.Add(this.subMenu2);
             this.pMenu.Controls.Add(this.btnVehiculo);
             this.pMenu.Controls.Add(this.subMenu);
             this.pMenu.Controls.Add(this.btnVentas);
             this.pMenu.Controls.Add(this.pLogo);
-            this.pMenu.Controls.Add(this.lbGrupo);
             this.pMenu.Location = new System.Drawing.Point(950, 0);
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(200, 650);
@@ -172,13 +192,14 @@
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReporte.Image = global::Vistas.Properties.Resources.ajusteEd1;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 473);
+            this.btnReporte.Location = new System.Drawing.Point(0, 546);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(15);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(200, 50);
             this.btnReporte.TabIndex = 7;
-            this.btnReporte.Text = "Configuracion";
+            this.btnReporte.Text = "      Configuracion";
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
@@ -191,8 +212,9 @@
             this.btnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSistema.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSistema.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSistema.Image = global::Vistas.Properties.Resources.empleados;
             this.btnSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSistema.Location = new System.Drawing.Point(0, 418);
+            this.btnSistema.Location = new System.Drawing.Point(0, 491);
             this.btnSistema.Margin = new System.Windows.Forms.Padding(15);
             this.btnSistema.Name = "btnSistema";
             this.btnSistema.Size = new System.Drawing.Size(200, 55);
@@ -210,8 +232,9 @@
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCliente.Image = global::Vistas.Properties.Resources.clientes;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(0, 363);
+            this.btnCliente.Location = new System.Drawing.Point(0, 436);
             this.btnCliente.Margin = new System.Windows.Forms.Padding(15);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(200, 55);
@@ -219,6 +242,60 @@
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // subMenu2
+            // 
+            this.subMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.subMenu2.Controls.Add(this.btnNuevoGestion);
+            this.subMenu2.Controls.Add(this.btnNuevoVeh);
+            this.subMenu2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subMenu2.Location = new System.Drawing.Point(0, 363);
+            this.subMenu2.Name = "subMenu2";
+            this.subMenu2.Size = new System.Drawing.Size(200, 73);
+            this.subMenu2.TabIndex = 9;
+            this.subMenu2.Visible = false;
+            // 
+            // btnNuevoGestion
+            // 
+            this.btnNuevoGestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnNuevoGestion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevoGestion.FlatAppearance.BorderSize = 0;
+            this.btnNuevoGestion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(145)))));
+            this.btnNuevoGestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoGestion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoGestion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNuevoGestion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoGestion.Location = new System.Drawing.Point(0, 36);
+            this.btnNuevoGestion.Margin = new System.Windows.Forms.Padding(15);
+            this.btnNuevoGestion.Name = "btnNuevoGestion";
+            this.btnNuevoGestion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnNuevoGestion.Size = new System.Drawing.Size(200, 37);
+            this.btnNuevoGestion.TabIndex = 4;
+            this.btnNuevoGestion.Text = "Gestion Tipo, Clase";
+            this.btnNuevoGestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoGestion.UseVisualStyleBackColor = false;
+            this.btnNuevoGestion.Click += new System.EventHandler(this.btnNuevoGestion_Click);
+            // 
+            // btnNuevoVeh
+            // 
+            this.btnNuevoVeh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnNuevoVeh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevoVeh.FlatAppearance.BorderSize = 0;
+            this.btnNuevoVeh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(145)))));
+            this.btnNuevoVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoVeh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoVeh.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNuevoVeh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoVeh.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevoVeh.Margin = new System.Windows.Forms.Padding(15);
+            this.btnNuevoVeh.Name = "btnNuevoVeh";
+            this.btnNuevoVeh.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnNuevoVeh.Size = new System.Drawing.Size(200, 36);
+            this.btnNuevoVeh.TabIndex = 2;
+            this.btnNuevoVeh.Text = "Nuevo Vehiculo";
+            this.btnNuevoVeh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoVeh.UseVisualStyleBackColor = false;
+            this.btnNuevoVeh.Click += new System.EventHandler(this.btnNuevoVeh_Click);
             // 
             // btnVehiculo
             // 
@@ -229,6 +306,7 @@
             this.btnVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehiculo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehiculo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVehiculo.Image = global::Vistas.Properties.Resources.compras;
             this.btnVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculo.Location = new System.Drawing.Point(0, 308);
             this.btnVehiculo.Margin = new System.Windows.Forms.Padding(15);
@@ -302,6 +380,7 @@
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVentas.Image = global::Vistas.Properties.Resources.venta;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Location = new System.Drawing.Point(0, 180);
             this.btnVentas.Margin = new System.Windows.Forms.Padding(15);
@@ -315,6 +394,10 @@
             // pLogo
             // 
             this.pLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+//<<<<<<< Updated upstream
+//=======
+            this.pLogo.Controls.Add(this.linkLabel1);
+//>>>>>>> Stashed changes
             this.pLogo.Controls.Add(this.label1);
             this.pLogo.Controls.Add(this.lblLogueado);
             this.pLogo.Controls.Add(this.iconMaximizar);
@@ -328,6 +411,23 @@
             this.pLogo.Size = new System.Drawing.Size(200, 180);
             this.pLogo.TabIndex = 0;
             // 
+//<<<<<<< Updated upstream
+//=======
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Aqua;
+            this.linkLabel1.Location = new System.Drawing.Point(6, 134);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(59, 13);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Editar perfil";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+//>>>>>>> Stashed changes
             // label1
             // 
             this.label1.AutoSize = true;
@@ -354,32 +454,34 @@
             // 
             this.iconMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconMaximizar.Location = new System.Drawing.Point(141, 3);
+            this.iconMaximizar.Image = global::Vistas.Properties.Resources.maxi;
+            this.iconMaximizar.Location = new System.Drawing.Point(111, 3);
             this.iconMaximizar.Name = "iconMaximizar";
             this.iconMaximizar.Size = new System.Drawing.Size(20, 20);
             this.iconMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconMaximizar.TabIndex = 1;
             this.iconMaximizar.TabStop = false;
-            this.iconMaximizar.Click += new System.EventHandler(this.iconMaximizar_Click);
+            this.iconMaximizar.Visible = false;
             // 
             // iconRestaurar
             // 
             this.iconRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconRestaurar.Location = new System.Drawing.Point(141, 3);
+            this.iconRestaurar.Image = global::Vistas.Properties.Resources.res;
+            this.iconRestaurar.Location = new System.Drawing.Point(111, 3);
             this.iconRestaurar.Name = "iconRestaurar";
             this.iconRestaurar.Size = new System.Drawing.Size(20, 20);
             this.iconRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconRestaurar.TabIndex = 3;
             this.iconRestaurar.TabStop = false;
             this.iconRestaurar.Visible = false;
-            this.iconRestaurar.Click += new System.EventHandler(this.iconRestaurar_Click);
             // 
             // iconMinimizar
             // 
             this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconMinimizar.Location = new System.Drawing.Point(115, 3);
+            this.iconMinimizar.Image = global::Vistas.Properties.Resources.minimazar;
+            this.iconMinimizar.Location = new System.Drawing.Point(142, 3);
             this.iconMinimizar.Name = "iconMinimizar";
             this.iconMinimizar.Size = new System.Drawing.Size(20, 20);
             this.iconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -391,6 +493,7 @@
             // 
             this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconCerrar.Image = global::Vistas.Properties.Resources.cerrar;
             this.iconCerrar.Location = new System.Drawing.Point(168, 3);
             this.iconCerrar.Name = "iconCerrar";
             this.iconCerrar.Size = new System.Drawing.Size(20, 20);
@@ -401,6 +504,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::Vistas.Properties.Resources.persona;
             this.pictureBox2.Location = new System.Drawing.Point(135, 40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(62, 51);
@@ -410,9 +514,15 @@
             // 
             // panel1
             // 
+//<<<<<<< Updated upstream
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+//=======
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+//>>>>>>> Stashed changes
             this.panel1.Location = new System.Drawing.Point(0, 602);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(950, 48);
@@ -435,7 +545,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(650, 400);
             this.Name = "FrmMenu";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmMenu_Load);
@@ -445,6 +555,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pMenu.ResumeLayout(false);
             this.pMenu.PerformLayout();
+            this.subMenu2.ResumeLayout(false);
             this.subMenu.ResumeLayout(false);
             this.pLogo.ResumeLayout(false);
             this.pLogo.PerformLayout();
@@ -484,6 +595,10 @@
         private System.Windows.Forms.Label lbfecha;
         private System.Windows.Forms.Timer fecha_t;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Panel subMenu2;
+        private System.Windows.Forms.Button btnNuevoGestion;
+        private System.Windows.Forms.Button btnNuevoVeh;
     }
 }
 

@@ -111,6 +111,13 @@ C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\Vistas\obj\x86\Debug\Vistas.
 C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\Vistas\obj\x86\Debug\Vistas.exe.manifest
 C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\Vistas\obj\x86\Debug\Vistas.application
 C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\Vistas\obj\x86\Debug\Vistas.FrmAnularVenta.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\bin\Debug\Vistas.exe.manifest
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\bin\Debug\Vistas.application
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.fBienvenida.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAnularVenta.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmGestion.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe.manifest
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.application
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.fBienvenida.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAnularVenta.resources
@@ -121,7 +128,6 @@ D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmListadoVentas.
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmMenu.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAltaUsuario.resources
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmModiCliente.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmModiUsuario.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmNuevaVenta.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmNuevoVehiculo.resources
@@ -130,6 +136,7 @@ D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmVehiculo.resou
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.Listados.FrmListadoDato.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.Listados.FrmListadoFechas.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.Listados.FrmListadoSimple.resources
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\Vistas.exe.config
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\Vistas.exe.manifest
@@ -138,15 +145,7 @@ D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\Vistas.exe
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\Vistas.pdb
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\ClaseBase.dll
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\ClaseBase.pdb
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe.manifest
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.application
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.pdb
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\bin\Debug\Vistas.exe.manifest
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\bin\Debug\Vistas.application
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.fBienvenida.resources
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAnularVenta.resources
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmGestion.resources
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe.manifest
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.application
