@@ -90,7 +90,7 @@ namespace Vistas
             }
             else
             {
-                MessageBox.Show("Seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
