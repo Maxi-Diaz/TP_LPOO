@@ -1,0 +1,4 @@
+D:\Apu\LPOO2020\unidad-3-4\TP1-lpoo08\LPOOI_GRUPO08\ClaseBase\bin\Release\ClaseBase.dll
+D:\Apu\LPOO2020\unidad-3-4\TP1-lpoo08\LPOOI_GRUPO08\ClaseBase\bin\Release\ClaseBase.pdb
+D:\Apu\LPOO2020\unidad-3-4\TP1-lpoo08\LPOOI_GRUPO08\ClaseBase\obj\Release\ClaseBase.dll
+D:\Apu\LPOO2020\unidad-3-4\TP1-lpoo08\LPOOI_GRUPO08\ClaseBase\obj\Release\ClaseBase.pdb
