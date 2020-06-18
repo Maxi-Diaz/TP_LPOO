@@ -70,8 +70,6 @@ C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmLi
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmMenu.resources
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAltaUsuario.resources
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmModiCliente.resources
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmModiUsuario.resources
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmNuevaVenta.resources
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmUsuario.resources
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmVehiculo.resources

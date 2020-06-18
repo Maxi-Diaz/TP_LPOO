@@ -61,6 +61,7 @@
     <Compile Include="BD\LineaABM.cs" />
     <Compile Include="BD\ListaABM.cs" />
     <Compile Include="BD\MarcaABM.cs" />
+    <Compile Include="BD\PagoABM.cs" />
     <Compile Include="BD\TipoABM.cs" />
     <Compile Include="BD\UsuarioABM.cs" />
     <Compile Include="BD\Validaciones.cs" />

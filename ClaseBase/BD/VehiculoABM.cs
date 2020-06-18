@@ -28,6 +28,51 @@ namespace ClaseBase.BD
             return dt;
         }
 
+        public static DataTable list_vehiculos_venta() {
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT veh_id, veh_matricula + ' ' + lin_nombre + ' ' + mar_nombre + ' ' + veh_color as veh_datos FROM Vehiculo as V ";
+            cmd.CommandText += "LEFT JOIN Linea as L ON (L.lin_id=V.lin_id) ";
+            cmd.CommandText += "LEFT JOIN Marca as M ON (M.mar_id=L.mar_id) ";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static string precio_vehiculo(int id) {
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = " SELECT veh_precio FROM Vehiculo ";
+            cmd.CommandText += " WHERE veh_id = @idV ";
+            cmd.Parameters.AddWithValue("@idV", id);
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 1) {
+
+                return dt.Rows[0][0].ToString();
+            }
+            else {
+                return "0";
+            }
+
+
+        }
+
         public static DataTable list_Vehiculos_disponible() {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
 

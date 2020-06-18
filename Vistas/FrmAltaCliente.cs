@@ -40,9 +40,15 @@ namespace Vistas
                     cliente.Cli_Telefono = tbx_telefono.Text;
                     if (ClienteABM.cliente_existente(cliente.Cli_Dni) == 0)
                     {
-                        ClienteABM.agregarCliente(cliente);
-                        //MessageBox.Show(ClienteABM.cliente_existente(cliente.Cli_Dni).ToString());
-                        this.Close();
+                        try {
+                            ClienteABM.agregarCliente(cliente);
+                            MessageBox.Show("Cliente Agregado!");
+                            this.Close();
+                        }catch (Exception a) {
+                            MessageBox.Show("" + a);
+                            MessageBox.Show("Cliente no Registrado!");
+                        }
+                        
                     }
                     else
                     {
@@ -56,6 +62,7 @@ namespace Vistas
                 if (tbx_dni.Text != "" && tbx_nombre.Text != "" && tbx_apellido.Text != ""
                 && tbx_direccion.Text != "" && tbx_telefono.Text != "") {
                     Cliente cliente = new Cliente();
+                    cliente.Cli_Id = Convert.ToInt32(txtID.Text);
                     cliente.Cli_Dni = tbx_dni.Text;
                     cliente.Cli_Nombre = tbx_nombre.Text;
                     cliente.Cli_Apellido = tbx_apellido.Text;
@@ -63,9 +70,15 @@ namespace Vistas
                     cliente.Cli_Telefono = tbx_telefono.Text;
                     if (ClienteABM.cliente_existente(cliente.Cli_Dni) <= 1)
                     {
-                        ClienteABM.editarCliente(cliente);
-                        //MessageBox.Show(ClienteABM.cliente_existente(cliente.Cli_Dni).ToString());
-                        this.Close();
+                        try {
+                              ClienteABM.editarCliente(cliente);
+                              MessageBox.Show("Cliente Editado!");
+                              this.Close();
+                        }catch (Exception a) {
+                            MessageBox.Show("" + a);
+                            MessageBox.Show("Cliente no Editado!");
+                        }
+                       
                     }
                     else
                     {
@@ -78,7 +91,10 @@ namespace Vistas
                 }
             }
             
+
         }
+
+           
 
         private void tbx_dni_KeyPress( object sender, KeyPressEventArgs e ) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&

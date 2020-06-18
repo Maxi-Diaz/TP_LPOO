@@ -58,6 +58,7 @@
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 73;
+            this.txtID.Visible = false;
             // 
             // chbGPS
             // 

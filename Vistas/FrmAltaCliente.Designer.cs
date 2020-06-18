@@ -43,6 +43,7 @@
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -201,6 +202,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.lbl_title);
             this.groupBox1.Controls.Add(this.btn_cancelar);
             this.groupBox1.Controls.Add(this.btn_aceptar);
@@ -229,6 +231,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 16);
             this.panel1.TabIndex = 26;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(127, 23);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 25;
+            this.txtID.Visible = false;
             // 
             // FrmAltaCliente
             // 
@@ -265,5 +275,6 @@
         public System.Windows.Forms.TextBox tbx_dni;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox txtID;
     }
 }

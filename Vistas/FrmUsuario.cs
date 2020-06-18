@@ -39,6 +39,7 @@ namespace Vistas
             tblUsuario.DataSource = UsuarioABM.cargarUsuarios();
             tblUsuario.Columns[6].Visible = false;
             tblUsuario.Columns[7].Visible = false;
+            tblUsuario.Columns[1].Visible = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -83,9 +84,9 @@ namespace Vistas
             {
                 FrmAltaUsuario frm = new FrmAltaUsuario();
                 frm.lbl_title.Text = "Modificar";
-                frm.txtId.Visible = true;
-                frm.txtId.Enabled = false;
-                frm.label1.Visible = true;
+               // frm.txtId.Visible = true;
+               // frm.txtId.Enabled = false;
+                //frm.label1.Visible = true;
                 frm.cmbRol.SelectedValue = tblUsuario.CurrentRow.Cells["rol_Codigo"].Value.ToString();
                 frm.txtApellido.Text = tblUsuario.CurrentRow.Cells["Apellido y Nombre"].Value.ToString();
                 frm.txtUsuario.Text = tblUsuario.CurrentRow.Cells["Usuario"].Value.ToString();

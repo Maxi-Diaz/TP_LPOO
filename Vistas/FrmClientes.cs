@@ -46,6 +46,7 @@ namespace Vistas
                 //FrmModiCliente frm = new FrmModiCliente();
                 FrmAltaCliente frm = new FrmAltaCliente();
                 frm.lbl_title.Text = "Modificar";
+                frm.txtID.Text = tblCliente.CurrentRow.Cells["cli_ID"].Value.ToString();////////////////
                 frm.tbx_dni.Text = tblCliente.CurrentRow.Cells["DNI"].Value.ToString();
                 frm.tbx_nombre.Text = tblCliente.CurrentRow.Cells["Nombre"].Value.ToString();
                 frm.tbx_apellido.Text = tblCliente.CurrentRow.Cells["Apellido"].Value.ToString();

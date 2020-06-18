@@ -44,9 +44,16 @@ namespace Vistas
                     user.Usr_Estado = true;
                     if (UsuarioABM.usuario_existente(user.Usr_NombreUsuario) == 0)
                     {
-                        UsuarioABM.agregarUsuario(user);
-                        //MessageBox.Show(UsuarioABM.usuario_existente(user.Usr_NombreUsuario).ToString());
-                        this.Close();
+                        try {
+                            UsuarioABM.agregarUsuario(user);
+                            MessageBox.Show("Usuario Agregado!");
+                            this.Close();
+                        }
+                        catch (Exception a) {
+                            MessageBox.Show("" + a);
+                            MessageBox.Show("Usuario no Registrado!");
+                        }
+                       
                     }
                     else
                     {
@@ -72,9 +79,16 @@ namespace Vistas
                     user.Usr_Estado = true;
                     if (UsuarioABM.usuario_existente(user.Usr_NombreUsuario) <= 1)
                     {
-                        UsuarioABM.mod_User(user);
-                        //MessageBox.Show(UsuarioABM.usuario_existente(user.Usr_NombreUsuario).ToString());
-                        this.Close();
+                        try {
+                            UsuarioABM.mod_User(user);
+                            MessageBox.Show("Usuario Editado");
+                            this.Close();
+                        }
+                        catch (Exception a) {
+                            MessageBox.Show("" + a);
+                            MessageBox.Show("Usuario no editado!");
+                        }
+                        
                     }
                     else
                     {

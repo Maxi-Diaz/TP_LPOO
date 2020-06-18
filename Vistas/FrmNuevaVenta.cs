@@ -41,14 +41,13 @@ namespace Vistas
             cmbVehiculo.DataSource = VehiculoABM.list_Vehiculos_disponible();
 
         }
-        /// <summary>
-        /// ////////Cambiar a FORMAPAGO AMB
-        /// </summary>
+     
+
         private void load_combo_formaPago()
         {
             cmbPago.DisplayMember = "pag_Forma";
             cmbPago.ValueMember = "pag_id";
-            cmbPago.DataSource = VentasABM.list_forma_pago();
+            cmbPago.DataSource = PagoABM.list_forma_pago();
         }
 
         private void cargar_Vendedor(string user, string pwd)
@@ -111,7 +110,7 @@ namespace Vistas
 
         private void cmbVehiculo_TextChanged(object sender, EventArgs e)
         {
-            txtPrecio.Text = VentasABM.precio_vehiculo(Convert.ToInt32(cmbVehiculo.SelectedValue.ToString()));
+            txtPrecio.Text = VehiculoABM.precio_vehiculo(Convert.ToInt32(cmbVehiculo.SelectedValue.ToString()));
         }
 
         private void txtPrecio_KeyPress( object sender, KeyPressEventArgs e ) {

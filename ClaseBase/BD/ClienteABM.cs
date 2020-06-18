@@ -35,7 +35,7 @@ namespace ClaseBase.BD
             cmd.CommandText = "edit_cliente";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexion;
-
+            cmd.Parameters.AddWithValue("@idC", cliente.Cli_Id);
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_Dni);
             cmd.Parameters.AddWithValue("@nombre", cliente.Cli_Nombre);
             cmd.Parameters.AddWithValue("@apellido", cliente.Cli_Apellido);

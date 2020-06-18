@@ -25,6 +25,7 @@ namespace Vistas
         private void Cargar()
         {
             dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos();
+            dgvVehiculos.Columns[0].Visible = false;
             dgvVehiculos.Columns[12].Visible = false;
             dgvVehiculos.Columns[13].Visible = false;
             dgvVehiculos.Columns[14].Visible = false;
@@ -65,7 +66,13 @@ namespace Vistas
                 oFrm.cmb_clase.SelectedValue = dgvVehiculos.CurrentRow.Cells["cls_ID"].Value.ToString();
                 oFrm.txtPrecio.Text = dgvVehiculos.CurrentRow.Cells["Precio"].Value.ToString();
 
-                oFrm.ShowDialog();
+               
+                if (dgvVehiculos.CurrentRow.Cells["Estado"].Value.ToString() == "DISPONIBLE") {
+                     oFrm.ShowDialog(); 
+                }
+                else {
+                    MessageBox.Show("El Vehiculo esta Vendido no se puede editar!");
+                }
                 Cargar();
             }
             else
