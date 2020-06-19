@@ -81,7 +81,7 @@ namespace Vistas
                 Venta oVenta = new Venta();
                 oVenta.Cli_Id = (int) cmbCliente.SelectedValue;
                 oVenta.Veh_Id = (int) cmbVehiculo.SelectedValue;
-                oVenta.Usr_Id = (int) cmbCliente.SelectedValue;
+                oVenta.Usr_Id = (int) cmbVendedor.SelectedValue;
                 oVenta.Vta_Fecha = dtmFecha.Value;
                 oVenta.Pag_Id = cmbPago.SelectedValue.ToString();
                 oVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);

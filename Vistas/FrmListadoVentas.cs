@@ -91,13 +91,13 @@ namespace Vistas
         private void btn_anuluar_Click( object sender, EventArgs e ) {
 
             DialogResult dialogResult = MessageBox.Show("¿Seguro quieres ANULAR la venta N°"+
-                tbListaVentas.CurrentRow.Cells["ID"].Value.ToString()+"?", "Anular", MessageBoxButtons.YesNo);
+                tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString() + "?", "Anular", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes) {
                 //do something
                 try {
                     Venta Oventa = new Venta();
-                    Oventa.Vta_Id = Convert.ToInt32(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString());
-                    VentasABM.set_estado_venta(int.Parse(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString()), "ANULADA");
+                    Oventa.Vta_Id = Convert.ToInt32(tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString());
+                    VentasABM.set_estado_venta(int.Parse(tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString()), "ANULADA");
                     Vehiculo oVehiculo = new Vehiculo();
                     oVehiculo.Veh_ID = Convert.ToInt32(tbListaVentas.CurrentRow.Cells["veh_ID"].Value.ToString());
                     oVehiculo.Veh_Estado = true;
@@ -177,7 +177,7 @@ namespace Vistas
                 //MessageBox.Show(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString());
                 try {
                     imprimirFactura();
-                    VentasABM.set_estado_venta(int.Parse(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString()), "VALIDADA");
+                    VentasABM.set_estado_venta(int.Parse(tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString()), "VALIDADA");
                     cargar();
                 }catch(Exception a){
                     MessageBox.Show(""+a);
@@ -192,7 +192,7 @@ namespace Vistas
 
             try {
                 Document documento = new Document(PageSize.A5, 10, 10, 10, 10);
-                string nombre = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Factura N°" +tbListaVentas.CurrentRow.Cells["ID"].Value.ToString() + ".pdf";
+                string nombre = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Factura N°" + tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString() + ".pdf";
                 FileStream archivo = new FileStream(nombre, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
                 
                 PdfWriter.GetInstance(documento, archivo);
@@ -254,7 +254,7 @@ namespace Vistas
             cellpng.BorderWidth = 0;
             info.AddCell(cellpng);
 
-            PdfPCell cellinfo = new PdfPCell(new Phrase(" N° De Factura: " + tbListaVentas.CurrentRow.Cells["ID"].Value.ToString() + "\n " +
+            PdfPCell cellinfo = new PdfPCell(new Phrase(" N° De Factura: " + tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString() + "\n " +
                 "Fecha de Factura: " + DateTime.Now + "\n\n " +
                 "--------------------------------------------------- \n\n" +
                 " Empresa: " + "Company Car" + "\n " +
