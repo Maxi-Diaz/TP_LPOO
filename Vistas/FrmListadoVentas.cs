@@ -170,22 +170,39 @@ namespace Vistas
         }
 
         private void btn_confirmar_Click( object sender, EventArgs e ) {
-            
-            DialogResult dialogResult = MessageBox.Show("¿Quieres CONFIRMAR la venta e Imprimir la Factura?", "Confirmar", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes) {
-                //do something
-                //MessageBox.Show(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString());
-                try {
-                    imprimirFactura();
-                    VentasABM.set_estado_venta(int.Parse(tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString()), "VALIDADA");
-                    cargar();
-                }catch(Exception a){
-                    MessageBox.Show(""+a);
+            if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "PENDIENTE") {
+                DialogResult dialogResult = MessageBox.Show("¿Quieres CONFIRMAR la venta e Imprimir la Factura?", "Confirmar", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes) {
+                    //do something
+                    //MessageBox.Show(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString());
+                    try {
+                        imprimirFactura();
+                        VentasABM.set_estado_venta(int.Parse(tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString()), "VALIDADA");
+                        cargar();
+                    } catch (Exception a) {
+                        MessageBox.Show("" + a);
+                    }
+
+                } else if (dialogResult == DialogResult.No) {
+                    //do something else
                 }
-                
-            } else if (dialogResult == DialogResult.No) {
-                //do something else
+            } else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
+                DialogResult dialogResult = MessageBox.Show("¿Quieres Imprimir la Factura?", "Confirmar", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes) {
+                    //do something
+                    //MessageBox.Show(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString());
+                    try {
+                        imprimirFactura();
+                        
+                    } catch (Exception a) {
+                        MessageBox.Show("" + a);
+                    }
+
+                } else if (dialogResult == DialogResult.No) {
+                    //do something else
+                }
             }
+            
         }
 
         private void imprimirFactura() {
@@ -323,7 +340,7 @@ namespace Vistas
         }
 
         private void tbListaVentas_CellMouseClick( object sender, DataGridViewCellMouseEventArgs e ) {
-            if(tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString()=="PENDIENTE"){
+            if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "PENDIENTE" || tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
                 btn_confirmar.Enabled = true;
             } else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "ANULADA") {
                 btn_confirmar.Enabled = false;
