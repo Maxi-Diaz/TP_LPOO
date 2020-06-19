@@ -39,9 +39,9 @@ C:\Users\Maxi-Diaz\Downloads\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll
 C:\Users\Maxi-Diaz\Downloads\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\Maxi-Diaz\Downloads\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Maxi-Diaz\Downloads\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.pdb
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll.config
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache

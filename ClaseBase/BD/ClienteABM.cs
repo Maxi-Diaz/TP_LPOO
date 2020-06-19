@@ -199,5 +199,30 @@ namespace ClaseBase.BD
             return cantidad_dni;
 
         }
+
+        public static int cliente_compras(int cliente) {
+            int cantidad_dni;
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "cliente_compras";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            SqlParameter param;
+            param = new SqlParameter("@cliente", SqlDbType.Int);
+            param.Direction = ParameterDirection.Input;
+            param.Value = cliente;
+            cmd.Parameters.Add(param);
+            param = new SqlParameter("@existe", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+            // Obtengo el valor del Parametro de Salida
+            cantidad_dni = (int)cmd.Parameters["@existe"].Value;
+
+            return cantidad_dni;
+
+        }
     }
 }

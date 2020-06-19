@@ -266,5 +266,36 @@ namespace ClaseBase.BD
 
             return dt;
         }
+
+        public static int vehiculo_existente(string matricula) {
+
+            int cantidad_usuario;
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "vehiculo_existente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+          
+            SqlParameter param;
+            param = new SqlParameter("@matricula", SqlDbType.VarChar);
+            param.Direction = ParameterDirection.Input;
+            param.Value = matricula;
+            cmd.Parameters.Add(param);
+
+            param = new SqlParameter("@existe", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+
+            cantidad_usuario = (int)cmd.Parameters["@existe"].Value;
+
+            return cantidad_usuario;
+
+        }
     }
 }

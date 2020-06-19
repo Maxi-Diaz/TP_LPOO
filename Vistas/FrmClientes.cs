@@ -67,12 +67,19 @@ namespace Vistas
             {
                 Cliente cliente = new Cliente();
                 cliente.Cli_Dni = tblCliente.CurrentRow.Cells["DNI"].Value.ToString();
-                if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    ClienteABM.eliminarCliente(cliente);
-                    MessageBox.Show("Se elimino el usuario correctamente");
-                    CargarClientes();
+                cliente.Cli_Id = Convert.ToInt32( tblCliente.CurrentRow.Cells["cli_ID"].Value.ToString());
+                if(ClienteABM.cliente_compras(cliente.Cli_Id) != 0){
+                    MessageBox.Show("El cliente posee compras, no se puede eliminar");
+                }else{
+                     if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                      {
+                           ClienteABM.eliminarCliente(cliente);
+                           MessageBox.Show("Se elimino el usuario correctamente");
+                           CargarClientes();
+                      }
                 }
+
+               
             }
             else
             {

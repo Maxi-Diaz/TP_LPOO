@@ -16,12 +16,10 @@ using ClaseBase;
 
 namespace Vistas
 {
-    public partial class FrmListadoVentas : Form
-    {
+    public partial class FrmListadoVentas : Form {
         VentasABM ventas = new VentasABM();
         //string nomfile = "";
-        public FrmListadoVentas()
-        {
+        public FrmListadoVentas() {
 
             VentasABM ventas = new VentasABM();
             InitializeComponent();
@@ -40,8 +38,7 @@ namespace Vistas
             cmbClientes.Text = "Seleccione Cliente";
         }
 
-        public void cargar()
-        {
+        public void cargar() {
             //VentasABM ventas = new VentasABM();
             this.ventas.list_venta();
             cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
@@ -50,8 +47,7 @@ namespace Vistas
             tbListaVentas.Columns[10].Visible = false;
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
+        private void btnCerrar_Click(object sender, EventArgs e) {
             this.Close();
         }
 
@@ -70,7 +66,7 @@ namespace Vistas
             DateTime dtpi = new DateTime(dtpInicio.Value.Year, dtpInicio.Value.Month, dtpInicio.Value.Day, 0, 0, 0);
             DateTime dtpf = new DateTime(dtpFinal.Value.Year, dtpFinal.Value.Month, dtpFinal.Value.Day, 23, 59, 59);
             VentasABM ventas = new VentasABM();
-            ventas.list_Fecha(dtpi,dtpf);
+            ventas.list_Fecha(dtpi, dtpf);
             cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
             tbListaVentas.DataSource = ventas.Tabla;
         }
@@ -88,9 +84,9 @@ namespace Vistas
             cmbMarca.Text = "Seleccione Marca";
         }
 
-        private void btn_anuluar_Click( object sender, EventArgs e ) {
+        private void btn_anuluar_Click(object sender, EventArgs e) {
 
-            DialogResult dialogResult = MessageBox.Show("¿Seguro quieres ANULAR la venta N°"+
+            DialogResult dialogResult = MessageBox.Show("¿Seguro quieres ANULAR la venta N°" +
                 tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString() + "?", "Anular", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes) {
                 //do something
@@ -104,11 +100,13 @@ namespace Vistas
                     VehiculoABM.venderVehiculo(oVehiculo);
                     MessageBox.Show("Venta Anulada!");
                     cargar();
-                } catch (Exception a) {
+                }
+                catch (Exception a) {
                     MessageBox.Show("" + a);
                     MessageBox.Show("No se pudo Anular!");
                 }
-            } else if (dialogResult == DialogResult.No) {
+            }
+            else if (dialogResult == DialogResult.No) {
                 //do something else
             }
         }
@@ -119,19 +117,20 @@ namespace Vistas
             lbl_registro.Text = lbl_registro.Text + " " + "Importe Total(Confirmados): $" + importe;
         }
 
-        private void btn_imprimir_Click( object sender, EventArgs e ) {
+        private void btn_imprimir_Click(object sender, EventArgs e) {
             try {
-                Document documento = new Document(PageSize.A4.Rotate(),10,10,10,10);
-                string nombre = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)+ "\\Reporte.pdf";
+                Document documento = new Document(PageSize.A4.Rotate(), 10, 10, 10, 10);
+                string nombre = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Reporte.pdf";
                 FileStream archivo = new FileStream(nombre, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-                PdfWriter.GetInstance(documento,archivo);
+                PdfWriter.GetInstance(documento, archivo);
                 documento.Open();
                 ExportarPDF(documento);
                 documento.Close();
                 Process.Start(nombre);
                 cargar();
-            }catch(Exception a){
-                MessageBox.Show(""+a);
+            }
+            catch (Exception a) {
+                MessageBox.Show("" + a);
             }
         }
 
@@ -143,15 +142,15 @@ namespace Vistas
             pdf.WidthPercentage = 100;
             pdf.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
             pdf.DefaultCell.BorderWidth = 1;
-            float[] columwidth = { 3, 15, 8, 10, 10, 10, 10, 10, 10, 0 ,0};
+            float[] columwidth = { 3, 15, 8, 10, 10, 10, 10, 10, 10, 0, 0 };
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
             pdf.SetWidths(columwidth);
 
-            Paragraph encabezado = new Paragraph("Reporte Ventas",arial);
+            Paragraph encabezado = new Paragraph("Reporte Ventas", arial);
             encabezado.Alignment = Element.ALIGN_CENTER;
-            Paragraph texto = new Paragraph("Fecha:"+ DateTime.Now +"\n ",text);
-            
-            foreach(DataGridViewColumn column in tbListaVentas.Columns){
+            Paragraph texto = new Paragraph("Fecha:" + DateTime.Now + "\n ", text);
+
+            foreach (DataGridViewColumn column in tbListaVentas.Columns) {
                 PdfPCell celldt = new PdfPCell(new Phrase(column.HeaderText, text));
                 celldt.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
                 pdf.AddCell(celldt);
@@ -163,14 +162,15 @@ namespace Vistas
                     pdf.AddCell(new Phrase(cell.Value.ToString(), text));
                 }
             }
-            
+
             documento.Add(encabezado);
             documento.Add(texto);
             documento.Add(pdf);
         }
 
-        private void btn_confirmar_Click( object sender, EventArgs e ) {
+        private void btn_confirmar_Click(object sender, EventArgs e) {
             if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "PENDIENTE") {
+
                 DialogResult dialogResult = MessageBox.Show("¿Quieres CONFIRMAR la venta e Imprimir la Factura?", "Confirmar", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes) {
                     //do something
@@ -179,30 +179,36 @@ namespace Vistas
                         imprimirFactura();
                         VentasABM.set_estado_venta(int.Parse(tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString()), "VALIDADA");
                         cargar();
-                    } catch (Exception a) {
+                    }
+                    catch (Exception a) {
                         MessageBox.Show("" + a);
                     }
 
-                } else if (dialogResult == DialogResult.No) {
+                }
+                else if (dialogResult == DialogResult.No) {
                     //do something else
                 }
-            } else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
+            }
+            else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
+
                 DialogResult dialogResult = MessageBox.Show("¿Quieres Imprimir la Factura?", "Confirmar", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes) {
                     //do something
                     //MessageBox.Show(tbListaVentas.CurrentRow.Cells["ID"].Value.ToString());
                     try {
                         imprimirFactura();
-                        
-                    } catch (Exception a) {
+
+                    }
+                    catch (Exception a) {
                         MessageBox.Show("" + a);
                     }
 
-                } else if (dialogResult == DialogResult.No) {
+                }
+                else if (dialogResult == DialogResult.No) {
                     //do something else
                 }
             }
-            
+
         }
 
         private void imprimirFactura() {
@@ -211,13 +217,14 @@ namespace Vistas
                 Document documento = new Document(PageSize.A5, 10, 10, 10, 10);
                 string nombre = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Factura N°" + tbListaVentas.CurrentRow.Cells["Numero de Venta"].Value.ToString() + ".pdf";
                 FileStream archivo = new FileStream(nombre, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-                
+
                 PdfWriter.GetInstance(documento, archivo);
                 documento.Open();
                 ExportarFacturaPDF(documento);
                 documento.Close();
                 Process.Start(nombre);
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 MessageBox.Show("" + e);
             }
         }
@@ -229,7 +236,8 @@ namespace Vistas
             string gps = "";
             if (dtv.Rows[0][9].ToString() == "False") {
                 gps = "No";
-            } else {
+            }
+            else {
                 gps = "Si";
             }
 
@@ -275,7 +283,7 @@ namespace Vistas
                 "Fecha de Factura: " + DateTime.Now + "\n\n " +
                 "--------------------------------------------------- \n\n" +
                 " Empresa: " + "Company Car" + "\n " +
-                "Vendedor: "+ dtu.Rows[0][4].ToString()
+                "Vendedor: " + dtu.Rows[0][4].ToString()
                  , text));
             info.AddCell(cellinfo);
 
@@ -291,7 +299,7 @@ namespace Vistas
             cellcli.HorizontalAlignment = Element.ALIGN_CENTER;
             tablaCliente.AddCell(cellcli);
 
-            tablaCliente.AddCell(new Phrase("Nombre: " + dtc.Rows[0][1].ToString()+"\n" +
+            tablaCliente.AddCell(new Phrase("Nombre: " + dtc.Rows[0][1].ToString() + "\n" +
                 "Apellido: " + dtc.Rows[0][2].ToString() + "\n" +
                 "DNI: " + dtc.Rows[0][0].ToString() + "\n" +
                 "Direccion: " + dtc.Rows[0][3].ToString() + "\n" +
@@ -307,8 +315,8 @@ namespace Vistas
             cellveh.BackgroundColor = new iTextSharp.text.BaseColor(192, 192, 192);
             cellveh.HorizontalAlignment = Element.ALIGN_CENTER;
             tablaVeh.AddCell(cellveh);
-            
-            tablaVeh.AddCell(new Phrase("Matricula: " +dtv.Rows[0][1].ToString()+ "             " +
+
+            tablaVeh.AddCell(new Phrase("Matricula: " + dtv.Rows[0][1].ToString() + "             " +
                 "Modelo: " + dtv.Rows[0][2].ToString() + "\n" +
                 "Marca: " + dtv.Rows[0][3].ToString() + "                       " +
                 "Linea: " + dtv.Rows[0][4].ToString() + "\n" +
@@ -328,7 +336,7 @@ namespace Vistas
             cellimp.BackgroundColor = new iTextSharp.text.BaseColor(133, 185, 241);
             cellimp.HorizontalAlignment = Element.ALIGN_RIGHT;
             tablaImp.AddCell(cellimp);
-            tablaImp.AddCell(new Phrase("$" +tbListaVentas.CurrentRow.Cells["Precio Final"].Value.ToString(), text));
+            tablaImp.AddCell(new Phrase("$" + tbListaVentas.CurrentRow.Cells["Precio Final"].Value.ToString(), text));
 
             documento.Add(encabezado);
             documento.Add(info);
@@ -339,25 +347,45 @@ namespace Vistas
             documento.Add(tablaImp);
         }
 
-        private void tbListaVentas_CellMouseClick( object sender, DataGridViewCellMouseEventArgs e ) {
+        private void tbListaVentas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
             if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "PENDIENTE" || tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
                 btn_confirmar.Enabled = true;
-            } else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "ANULADA") {
+                
+            }
+            else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "ANULADA") {
                 btn_confirmar.Enabled = false;
-            } else {
+            }
+            else {
                 btn_confirmar.Enabled = false;
             }
 
             if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "PENDIENTE") {
                 btn_anuluar.Enabled = true;
-            } else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
+                btn_confirmar.Text = "Confirmar";
+            }
+            else if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
                 btn_anuluar.Enabled = false;
-            } else {
+                btn_confirmar.Text = "Factura";
+            }
+            else {
                 btn_anuluar.Enabled = false;
             }
         }
 
+        private void tbListaVentas_CellClick(object sender, DataGridViewCellEventArgs e) {
+
+            if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "PENDIENTE") {
+                
+
+            }
+            else {
+                if (tbListaVentas.CurrentRow.Cells["Estado"].Value.ToString() == "VALIDADA") {
+                    
+                }
+            }
 
 
+
+        }
     }
 }
