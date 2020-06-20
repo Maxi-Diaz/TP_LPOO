@@ -43,7 +43,6 @@ namespace Vistas
             cmbMarca.DisplayMember = "mar_Nombre";
             cmbMarca.ValueMember = "mar_ID";
             cmbMarca.DataSource = MarcaABM.list_Marca();
-            load_combo_marca()
         }
 
         private void cmbMarca_TextChanged(object sender, EventArgs e)
@@ -56,7 +55,6 @@ namespace Vistas
             cmb_tipo.DisplayMember = "tip_Tipo";
             cmb_tipo.ValueMember = "tip_ID";
             cmb_tipo.DataSource = VehiculoABM.list_tipo();
-            load_combo_tipo();
         }
 
         private void load_combo_clase()
@@ -64,14 +62,12 @@ namespace Vistas
             cmb_clase.DisplayMember = "cla_Descripcion";
             cmb_clase.ValueMember = "cla_ID";
             cmb_clase.DataSource = VehiculoABM.list_clase();
-            load_combo_clase();
         }
         private void load_combo_linea(int id)
         {
             cmbLinea.DisplayMember = "lin_Nombre";
             cmbLinea.ValueMember = "lin_ID";
             cmbLinea.DataSource = LineaABM.list_Linea(id);
-            load_combo_linea(id);
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -266,13 +262,6 @@ namespace Vistas
         {
             FrmLinea frm = new FrmLinea();
             frm.ShowDialog();
-        }
-
-        private void FrmNuevoVehiculo_Load(object sender, EventArgs e)
-        {
-            load_combo_marca();
-            load_combo_clase();
-            load_combo_tipo();
         }
     }
 }
