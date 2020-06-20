@@ -41,7 +41,7 @@ namespace Vistas
         public void cargar() {
             //VentasABM ventas = new VentasABM();
             this.ventas.list_venta();
-            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
+            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total_validada, ventas.Importe_total_anulada);
             tbListaVentas.DataSource = ventas.Tabla;
             tbListaVentas.Columns[9].Visible = false;
             tbListaVentas.Columns[10].Visible = false;
@@ -54,7 +54,7 @@ namespace Vistas
         private void btnCompras_Click(object sender, EventArgs e) {
             try {
                 ventas.list_Compras(cmbClientes.SelectedValue.ToString());
-                cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
+                cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total_validada, ventas.Importe_total_anulada);
                 tbListaVentas.DataSource = ventas.Tabla;
             } catch (Exception a) {
 
@@ -72,13 +72,13 @@ namespace Vistas
             DateTime dtpf = new DateTime(dtpFinal.Value.Year, dtpFinal.Value.Month, dtpFinal.Value.Day, 23, 59, 59);
             VentasABM ventas = new VentasABM();
             ventas.list_Fecha(dtpi, dtpf);
-            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
+            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total_validada, ventas.Importe_total_anulada);
             tbListaVentas.DataSource = ventas.Tabla;
         }
 
         private void button1_Click(object sender, EventArgs e) {
             ventas.buscarMarcaVenta(cmbMarca.SelectedValue.ToString());
-            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
+            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total_validada, ventas.Importe_total_anulada);
             tbListaVentas.DataSource = ventas.Tabla;
         }
 
@@ -116,10 +116,17 @@ namespace Vistas
             }
         }
 
-        private void cargar_lblInforme(string total, string anulada, string importe) {
+        private void cargar_lblInforme(string total, string anulada, string importeVal, string importeAnul) {
+            if(importeVal == ""){
+                importeVal = "0";
+            }
+            if (importeAnul == "") {
+                importeAnul = "0";
+            }
             lbl_registro.Text = "Total de Ventas:" + total + "  |  ";
             lbl_registro.Text = lbl_registro.Text + " " + "Total Anuladas: " + anulada + "  |  ";
-            lbl_registro.Text = lbl_registro.Text + " " + "Importe Total(Confirmados): $" + importe;
+            lbl_registro.Text = lbl_registro.Text + " " + "Importe (Confirmados): $" + importeVal + "  |  ";
+            lbl_registro.Text = lbl_registro.Text + " " + "Importe (Anuladas): $" + importeAnul;
         }
 
         private void btn_imprimir_Click(object sender, EventArgs e) {

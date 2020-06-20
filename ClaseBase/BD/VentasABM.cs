@@ -43,27 +43,27 @@ namespace ClaseBase.BD
             }
         }
 
-        private string importe_total;
+        private string importe_total_validada;
 
-        public string Importe_total {
+        public string Importe_total_validada {
             get {
-                return importe_total;
+                return importe_total_validada;
             }
             set {
-                importe_total = value;
+                importe_total_validada = value;
             }
         }
 
-       
+        private string importe_total_anulada;
 
-
-       
-
-       
-
-
-      
-        
+        public string Importe_total_anulada {
+            get {
+                return importe_total_anulada;
+            }
+            set {
+                importe_total_anulada = value;
+            }
+        }
 
         public void buscarMarcaVenta( string sPattern ) {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
@@ -93,6 +93,10 @@ namespace ClaseBase.BD
             param.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(param);
 
+            param = new SqlParameter("@imT_anulada", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -106,9 +110,10 @@ namespace ClaseBase.BD
             cnn.Close();
 
             //leer el valor del parametro de salida y mostrarlo en el formulario
-            Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value).Trim();
-            Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value).Trim();
-            Importe_total = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
+            Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value);
+            Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value);
+            Importe_total_validada = Convert.ToString(cmd.Parameters["@importe_total"].Value);
+            Importe_total_anulada = Convert.ToString(cmd.Parameters["@imT_anulada"].Value);
         }
 
         public static void insertVenta(Venta venta)
@@ -178,6 +183,10 @@ namespace ClaseBase.BD
             param.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(param);
 
+            param = new SqlParameter("@imT_anulada", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -193,7 +202,8 @@ namespace ClaseBase.BD
             //leer el valor del parametro de salida y mostrarlo en el formulario
             Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value).Trim();
             Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value).Trim();
-            Importe_total = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
+            Importe_total_validada = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
+            Importe_total_anulada = Convert.ToString(cmd.Parameters["@imT_anulada"].Value);
 
         }
 
@@ -230,6 +240,10 @@ namespace ClaseBase.BD
             param.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(param);
 
+            param = new SqlParameter("@imT_anulada", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -243,9 +257,10 @@ namespace ClaseBase.BD
             cnn.Close();
 
             //leer el valor del parametro de salida y mostrarlo en el formulario
-            Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value).Trim();
-            Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value).Trim();
-            Importe_total = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
+            Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value);
+            Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value);
+            Importe_total_validada = Convert.ToString(cmd.Parameters["@importe_total"].Value);
+            Importe_total_anulada = Convert.ToString(cmd.Parameters["@imT_anulada"].Value);
         }
 
         public void list_Fecha(DateTime inicio, DateTime final) {
@@ -281,6 +296,10 @@ namespace ClaseBase.BD
             param.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(param);
 
+            param = new SqlParameter("@imT_anulada", SqlDbType.Int);
+            param.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(param);
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -294,9 +313,10 @@ namespace ClaseBase.BD
             cnn.Close();
 
             //leer el valor del parametro de salida y mostrarlo en el formulario
-            Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value).Trim();
-            Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value).Trim();
-            Importe_total = Convert.ToString(cmd.Parameters["@importe_total"].Value).Trim();
+            Total_ventas = Convert.ToString(cmd.Parameters["@cuenta_ventas"].Value);
+            Total_anulada = Convert.ToString(cmd.Parameters["@cuenta_anuladas"].Value);
+            Importe_total_validada = Convert.ToString(cmd.Parameters["@importe_total"].Value);
+            Importe_total_anulada = Convert.ToString(cmd.Parameters["@imT_anulada"].Value);
         }
 
 
