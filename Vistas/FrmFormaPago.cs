@@ -89,6 +89,7 @@ namespace Vistas
             if (txtDesc.Text != "")
             {
                 FormaPago pago = new FormaPago();
+                pago.Pag_id = int.Parse(txtIdPago.Text);
                 pago.Pag_descripcion = txtDesc.Text;
                 PagoABM.editarPago(pago);
                 CargarPago();

@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qDNr6YYACJMN6bbvPE2StMX1UKA=</dsig:DigestValue>
+        <dsig:DigestValue>jE27y6a7XQdBAWyx8BmsAOv18Zw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,17 +73,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vkmnK+cgKlB6/V6pvyK/cLhvvbM=</dsig:DigestValue>
+        <dsig:DigestValue>+KYBvwW1kvq1adjlCp4dmyN6YVc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Vistas.exe.config" size="456">
+  <file name="Vistas.exe.config" size="464">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>EjGu3zCS/HaPwRL+mV1AQdAixgI=</dsig:DigestValue>
+      <dsig:DigestValue>UUrVIbmyd+lAL0FC/3Xzyos7IO0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
