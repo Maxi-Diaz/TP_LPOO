@@ -105,7 +105,6 @@ namespace Vistas
 
         private void btnEliminarClase_Click(object sender, EventArgs e)
         {
- 
             if (tblClaseVeh.CurrentRow != null)
             {
                 ClaseVehiculo clase = new ClaseVehiculo();

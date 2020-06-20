@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTipoID = new System.Windows.Forms.TextBox();
@@ -43,8 +43,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelarT = new System.Windows.Forms.Button();
             this.btnNuevoTipo = new System.Windows.Forms.Button();
+            this.btnEditGT = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCancelarC = new System.Windows.Forms.Button();
+            this.btnEditarG = new System.Windows.Forms.Button();
             this.btnNuevoClase = new System.Windows.Forms.Button();
             this.tblClaseVeh = new System.Windows.Forms.DataGridView();
             this.tblTipoVeh = new System.Windows.Forms.DataGridView();
@@ -53,10 +57,6 @@
             this.btnEliminarTipo = new System.Windows.Forms.Button();
             this.btnEditTipo = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnEditarG = new System.Windows.Forms.Button();
-            this.btnCancelarC = new System.Windows.Forms.Button();
-            this.btnCancelarT = new System.Windows.Forms.Button();
-            this.btnEditGT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblClaseVeh)).BeginInit();
@@ -151,7 +151,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(92, 0);
+            this.label5.Location = new System.Drawing.Point(84, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 23);
             this.label5.TabIndex = 8;
@@ -173,10 +173,10 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnCancelarT);
             this.groupBox1.Controls.Add(this.btnNuevoTipo);
             this.groupBox1.Controls.Add(this.btnEditGT);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtTipoClase);
             this.groupBox1.Controls.Add(this.txtTipoID);
             this.groupBox1.Controls.Add(this.label2);
@@ -187,6 +187,19 @@
             this.groupBox1.Size = new System.Drawing.Size(333, 211);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
+            // 
+            // btnCancelarT
+            // 
+            this.btnCancelarT.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnCancelarT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarT.Location = new System.Drawing.Point(182, 164);
+            this.btnCancelarT.Name = "btnCancelarT";
+            this.btnCancelarT.Size = new System.Drawing.Size(83, 29);
+            this.btnCancelarT.TabIndex = 13;
+            this.btnCancelarT.Text = "Cancelar";
+            this.btnCancelarT.UseVisualStyleBackColor = false;
+            this.btnCancelarT.Visible = false;
+            this.btnCancelarT.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnNuevoTipo
             // 
@@ -199,6 +212,19 @@
             this.btnNuevoTipo.Text = "Guardar";
             this.btnNuevoTipo.UseVisualStyleBackColor = false;
             this.btnNuevoTipo.Click += new System.EventHandler(this.btnNuevoTipo_Click);
+            // 
+            // btnEditGT
+            // 
+            this.btnEditGT.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEditGT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditGT.Location = new System.Drawing.Point(78, 164);
+            this.btnEditGT.Name = "btnEditGT";
+            this.btnEditGT.Size = new System.Drawing.Size(83, 29);
+            this.btnEditGT.TabIndex = 12;
+            this.btnEditGT.Text = "Guardar";
+            this.btnEditGT.UseVisualStyleBackColor = false;
+            this.btnEditGT.Visible = false;
+            this.btnEditGT.Click += new System.EventHandler(this.btnEditGT_Click);
             // 
             // groupBox2
             // 
@@ -217,6 +243,32 @@
             this.groupBox2.Size = new System.Drawing.Size(334, 199);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
+            // 
+            // btnCancelarC
+            // 
+            this.btnCancelarC.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnCancelarC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarC.Location = new System.Drawing.Point(178, 155);
+            this.btnCancelarC.Name = "btnCancelarC";
+            this.btnCancelarC.Size = new System.Drawing.Size(83, 29);
+            this.btnCancelarC.TabIndex = 11;
+            this.btnCancelarC.Text = "Cancelar";
+            this.btnCancelarC.UseVisualStyleBackColor = false;
+            this.btnCancelarC.Visible = false;
+            this.btnCancelarC.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnEditarG
+            // 
+            this.btnEditarG.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEditarG.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarG.Location = new System.Drawing.Point(74, 155);
+            this.btnEditarG.Name = "btnEditarG";
+            this.btnEditarG.Size = new System.Drawing.Size(83, 29);
+            this.btnEditarG.TabIndex = 10;
+            this.btnEditarG.Text = "Guardar";
+            this.btnEditarG.UseVisualStyleBackColor = false;
+            this.btnEditarG.Visible = false;
+            this.btnEditarG.Click += new System.EventHandler(this.btnEditarG_Click);
             // 
             // btnNuevoClase
             // 
@@ -239,28 +291,28 @@
             this.tblClaseVeh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(214)))), ((int)(((byte)(171)))));
             this.tblClaseVeh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblClaseVeh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblClaseVeh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblClaseVeh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.tblClaseVeh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblClaseVeh.Location = new System.Drawing.Point(33, 26);
+            this.tblClaseVeh.Location = new System.Drawing.Point(59, 41);
             this.tblClaseVeh.Name = "tblClaseVeh";
             this.tblClaseVeh.ReadOnly = true;
             this.tblClaseVeh.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblClaseVeh.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tblClaseVeh.Size = new System.Drawing.Size(286, 179);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblClaseVeh.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.tblClaseVeh.Size = new System.Drawing.Size(269, 179);
             this.tblClaseVeh.TabIndex = 12;
             // 
             // tblTipoVeh
@@ -272,28 +324,28 @@
             this.tblTipoVeh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(214)))), ((int)(((byte)(171)))));
             this.tblTipoVeh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblTipoVeh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblTipoVeh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblTipoVeh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.tblTipoVeh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblTipoVeh.Location = new System.Drawing.Point(33, 283);
+            this.tblTipoVeh.Location = new System.Drawing.Point(59, 283);
             this.tblTipoVeh.Name = "tblTipoVeh";
             this.tblTipoVeh.ReadOnly = true;
             this.tblTipoVeh.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblTipoVeh.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tblTipoVeh.Size = new System.Drawing.Size(286, 197);
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblTipoVeh.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.tblTipoVeh.Size = new System.Drawing.Size(269, 197);
             this.tblTipoVeh.TabIndex = 13;
             // 
             // btnEliminarClase
@@ -364,63 +416,11 @@
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             // 
-            // btnEditarG
-            // 
-            this.btnEditarG.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnEditarG.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarG.Location = new System.Drawing.Point(74, 155);
-            this.btnEditarG.Name = "btnEditarG";
-            this.btnEditarG.Size = new System.Drawing.Size(83, 29);
-            this.btnEditarG.TabIndex = 10;
-            this.btnEditarG.Text = "Guardar";
-            this.btnEditarG.UseVisualStyleBackColor = false;
-            this.btnEditarG.Visible = false;
-            this.btnEditarG.Click += new System.EventHandler(this.btnEditarG_Click);
-            // 
-            // btnCancelarC
-            // 
-            this.btnCancelarC.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnCancelarC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarC.Location = new System.Drawing.Point(178, 155);
-            this.btnCancelarC.Name = "btnCancelarC";
-            this.btnCancelarC.Size = new System.Drawing.Size(83, 29);
-            this.btnCancelarC.TabIndex = 11;
-            this.btnCancelarC.Text = "Cancelar";
-            this.btnCancelarC.UseVisualStyleBackColor = false;
-            this.btnCancelarC.Visible = false;
-            this.btnCancelarC.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCancelarT
-            // 
-            this.btnCancelarT.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnCancelarT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarT.Location = new System.Drawing.Point(182, 164);
-            this.btnCancelarT.Name = "btnCancelarT";
-            this.btnCancelarT.Size = new System.Drawing.Size(83, 29);
-            this.btnCancelarT.TabIndex = 13;
-            this.btnCancelarT.Text = "Cancelar";
-            this.btnCancelarT.UseVisualStyleBackColor = false;
-            this.btnCancelarT.Visible = false;
-            this.btnCancelarT.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnEditGT
-            // 
-            this.btnEditGT.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnEditGT.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditGT.Location = new System.Drawing.Point(78, 164);
-            this.btnEditGT.Name = "btnEditGT";
-            this.btnEditGT.Size = new System.Drawing.Size(83, 29);
-            this.btnEditGT.TabIndex = 12;
-            this.btnEditGT.Text = "Guardar";
-            this.btnEditGT.UseVisualStyleBackColor = false;
-            this.btnEditGT.Visible = false;
-            this.btnEditGT.Click += new System.EventHandler(this.btnEditGT_Click);
-            // 
             // FrmGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(80)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(934, 549);
             this.Controls.Add(this.groupBox3);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

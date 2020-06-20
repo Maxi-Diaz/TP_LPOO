@@ -42,8 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -223,6 +223,14 @@
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(127, 23);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 25;
+            this.txtID.Visible = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
@@ -231,14 +239,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 16);
             this.panel1.TabIndex = 26;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(127, 23);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 25;
-            this.txtID.Visible = false;
             // 
             // FrmAltaCliente
             // 

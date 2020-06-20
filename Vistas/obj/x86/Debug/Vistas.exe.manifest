@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClaseBase.dll" size="30720">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClaseBase.dll" size="31744">
       <assemblyIdentity name="ClaseBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>nVWQw0LodFkTe6Ylbz/s+gQdNz4=</dsig:DigestValue>
+        <dsig:DigestValue>qDNr6YYACJMN6bbvPE2StMX1UKA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,24 +66,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="257024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="262656">
       <assemblyIdentity name="Vistas" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oiZTdQmHAKd8HON43UHLLQAoEXU=</dsig:DigestValue>
+        <dsig:DigestValue>vkmnK+cgKlB6/V6pvyK/cLhvvbM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Vistas.exe.config" size="464">
+  <file name="Vistas.exe.config" size="456">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>UUrVIbmyd+lAL0FC/3Xzyos7IO0=</dsig:DigestValue>
+      <dsig:DigestValue>EjGu3zCS/HaPwRL+mV1AQdAixgI=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

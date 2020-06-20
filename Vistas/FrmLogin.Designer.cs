@@ -161,7 +161,7 @@
             this.lblErrorMsj.AutoSize = true;
             this.lblErrorMsj.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMsj.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorMsj.Location = new System.Drawing.Point(99, 410);
+            this.lblErrorMsj.Location = new System.Drawing.Point(83, 410);
             this.lblErrorMsj.Name = "lblErrorMsj";
             this.lblErrorMsj.Size = new System.Drawing.Size(71, 17);
             this.lblErrorMsj.TabIndex = 11;

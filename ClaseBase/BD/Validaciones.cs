@@ -80,5 +80,34 @@ namespace ClaseBase.BD {
                 return "";
             }
         }
+
+        public static string rol_usuario(int id)
+        {
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = " SELECT * FROM Usuario";
+            cmd.CommandText += " WHERE rol_Codigo = @id";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+
+                return dt.Rows[0][3].ToString();
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }

@@ -125,5 +125,11 @@ namespace Vistas
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmFormaPago frm = new FrmFormaPago();
+            frm.ShowDialog();
+        }
+
     }
 }

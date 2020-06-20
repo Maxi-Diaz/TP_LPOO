@@ -59,6 +59,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lbHora = new System.Windows.Forms.Label();
             this.fecha_t = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
             this.barTitulo.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -378,6 +380,8 @@
             // pLogo
             // 
             this.pLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pLogo.Controls.Add(this.lblRol);
+            this.pLogo.Controls.Add(this.label2);
             this.pLogo.Controls.Add(this.label1);
             this.pLogo.Controls.Add(this.lblLogueado);
             this.pLogo.Controls.Add(this.iconMaximizar);
@@ -518,6 +522,28 @@
             this.fecha_t.Enabled = true;
             this.fecha_t.Tick += new System.EventHandler(this.fecha_t_Tick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Rol: ";
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.White;
+            this.lblRol.Location = new System.Drawing.Point(42, 132);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(64, 18);
+            this.lblRol.TabIndex = 8;
+            this.lblRol.Text = "Usuario";
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,6 +611,8 @@
         public System.Windows.Forms.Panel pLogo;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label label2;
     }
 }
 

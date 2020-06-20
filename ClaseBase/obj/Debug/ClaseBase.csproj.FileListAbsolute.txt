@@ -28,12 +28,6 @@ C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\ClaseBase\bin\Debug\ClaseBas
 C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Usuario\Desktop\testsymfony\TP_LPOO-master\ClaseBase\obj\Debug\ClaseBase.pdb
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll.config
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.pdb
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.dll
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.pdb
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
 C:\Users\Maxi-Diaz\Downloads\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll.config
 C:\Users\Maxi-Diaz\Downloads\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll
 C:\Users\Maxi-Diaz\Downloads\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.pdb
@@ -45,3 +39,8 @@ C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.pdb
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.csprojResolveAssemblyReference.cache
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll.config
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.dll
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\bin\Debug\ClaseBase.pdb
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.dll
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\ClaseBase\obj\Debug\ClaseBase.pdb

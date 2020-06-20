@@ -25,9 +25,8 @@ namespace Vistas
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        public FrmMenu(String user, string pwd)
-        {
-            
+        public FrmMenu(string user, string pwd)
+        {        
             InitializeComponent();
             random = new Random();
             btnCerrar.Visible = false;
@@ -91,7 +90,7 @@ namespace Vistas
             }
         }
 
-        private void cargar_nombre(String user, string pwd)
+        private void cargar_nombre(string user, string pwd)
         {
             lblLogueado.Text = Validaciones.nombre_usuario(user, pwd);
         }
