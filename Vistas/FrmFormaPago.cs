@@ -18,11 +18,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void CargarPago()
         {
             tblFormaPago.DataSource = PagoABM.list_forma_pago();

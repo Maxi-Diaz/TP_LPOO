@@ -39,15 +39,15 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnSistema = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
-            this.subMenu2 = new System.Windows.Forms.Panel();
-            this.btnNuevoGestion = new System.Windows.Forms.Button();
-            this.btnNuevoVeh = new System.Windows.Forms.Button();
             this.btnVehiculo = new System.Windows.Forms.Button();
             this.subMenu = new System.Windows.Forms.Panel();
+            this.btnNuevoGestion = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnListado = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pLogo = new System.Windows.Forms.Panel();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogueado = new System.Windows.Forms.Label();
             this.iconMaximizar = new System.Windows.Forms.PictureBox();
@@ -59,13 +59,10 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lbHora = new System.Windows.Forms.Label();
             this.fecha_t = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblRol = new System.Windows.Forms.Label();
             this.barTitulo.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pMenu.SuspendLayout();
-            this.subMenu2.SuspendLayout();
             this.subMenu.SuspendLayout();
             this.pLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).BeginInit();
@@ -159,7 +156,6 @@
             this.pMenu.Controls.Add(this.btnReportes);
             this.pMenu.Controls.Add(this.btnSistema);
             this.pMenu.Controls.Add(this.btnCliente);
-            this.pMenu.Controls.Add(this.subMenu2);
             this.pMenu.Controls.Add(this.btnVehiculo);
             this.pMenu.Controls.Add(this.subMenu);
             this.pMenu.Controls.Add(this.btnVentas);
@@ -180,7 +176,7 @@
             this.btnReportes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReportes.Image = global::Vistas.Properties.Resources.reportes;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 546);
+            this.btnReportes.Location = new System.Drawing.Point(0, 509);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(15);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(200, 55);
@@ -200,12 +196,12 @@
             this.btnSistema.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSistema.Image = global::Vistas.Properties.Resources.empleados;
             this.btnSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSistema.Location = new System.Drawing.Point(0, 491);
+            this.btnSistema.Location = new System.Drawing.Point(0, 454);
             this.btnSistema.Margin = new System.Windows.Forms.Padding(15);
             this.btnSistema.Name = "btnSistema";
             this.btnSistema.Size = new System.Drawing.Size(200, 55);
             this.btnSistema.TabIndex = 6;
-            this.btnSistema.Text = "Sistema";
+            this.btnSistema.Text = "Usuarios";
             this.btnSistema.UseVisualStyleBackColor = true;
             this.btnSistema.Click += new System.EventHandler(this.btnSistema_Click);
             // 
@@ -220,7 +216,7 @@
             this.btnCliente.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCliente.Image = global::Vistas.Properties.Resources.clientes;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(0, 436);
+            this.btnCliente.Location = new System.Drawing.Point(0, 399);
             this.btnCliente.Margin = new System.Windows.Forms.Padding(15);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(200, 55);
@@ -228,60 +224,6 @@
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
-            // subMenu2
-            // 
-            this.subMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.subMenu2.Controls.Add(this.btnNuevoGestion);
-            this.subMenu2.Controls.Add(this.btnNuevoVeh);
-            this.subMenu2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenu2.Location = new System.Drawing.Point(0, 363);
-            this.subMenu2.Name = "subMenu2";
-            this.subMenu2.Size = new System.Drawing.Size(200, 73);
-            this.subMenu2.TabIndex = 9;
-            this.subMenu2.Visible = false;
-            // 
-            // btnNuevoGestion
-            // 
-            this.btnNuevoGestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btnNuevoGestion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevoGestion.FlatAppearance.BorderSize = 0;
-            this.btnNuevoGestion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(145)))));
-            this.btnNuevoGestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoGestion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoGestion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnNuevoGestion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevoGestion.Location = new System.Drawing.Point(0, 36);
-            this.btnNuevoGestion.Margin = new System.Windows.Forms.Padding(15);
-            this.btnNuevoGestion.Name = "btnNuevoGestion";
-            this.btnNuevoGestion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnNuevoGestion.Size = new System.Drawing.Size(200, 37);
-            this.btnNuevoGestion.TabIndex = 4;
-            this.btnNuevoGestion.Text = "Gestion Tipo, Clase";
-            this.btnNuevoGestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoGestion.UseVisualStyleBackColor = false;
-            this.btnNuevoGestion.Click += new System.EventHandler(this.btnNuevoGestion_Click);
-            // 
-            // btnNuevoVeh
-            // 
-            this.btnNuevoVeh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.btnNuevoVeh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevoVeh.FlatAppearance.BorderSize = 0;
-            this.btnNuevoVeh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(145)))));
-            this.btnNuevoVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoVeh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoVeh.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnNuevoVeh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevoVeh.Location = new System.Drawing.Point(0, 0);
-            this.btnNuevoVeh.Margin = new System.Windows.Forms.Padding(15);
-            this.btnNuevoVeh.Name = "btnNuevoVeh";
-            this.btnNuevoVeh.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnNuevoVeh.Size = new System.Drawing.Size(200, 36);
-            this.btnNuevoVeh.TabIndex = 2;
-            this.btnNuevoVeh.Text = "Nuevo Vehiculo";
-            this.btnNuevoVeh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoVeh.UseVisualStyleBackColor = false;
-            this.btnNuevoVeh.Click += new System.EventHandler(this.btnNuevoVeh_Click);
             // 
             // btnVehiculo
             // 
@@ -294,7 +236,7 @@
             this.btnVehiculo.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnVehiculo.Image = global::Vistas.Properties.Resources.compras;
             this.btnVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehiculo.Location = new System.Drawing.Point(0, 308);
+            this.btnVehiculo.Location = new System.Drawing.Point(0, 344);
             this.btnVehiculo.Margin = new System.Windows.Forms.Padding(15);
             this.btnVehiculo.Name = "btnVehiculo";
             this.btnVehiculo.Size = new System.Drawing.Size(200, 55);
@@ -306,14 +248,36 @@
             // subMenu
             // 
             this.subMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.subMenu.Controls.Add(this.btnNuevoGestion);
             this.subMenu.Controls.Add(this.btnNuevo);
             this.subMenu.Controls.Add(this.btnListado);
             this.subMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenu.Location = new System.Drawing.Point(0, 235);
             this.subMenu.Name = "subMenu";
-            this.subMenu.Size = new System.Drawing.Size(200, 73);
+            this.subMenu.Size = new System.Drawing.Size(200, 109);
             this.subMenu.TabIndex = 8;
             this.subMenu.Visible = false;
+            // 
+            // btnNuevoGestion
+            // 
+            this.btnNuevoGestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.btnNuevoGestion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevoGestion.FlatAppearance.BorderSize = 0;
+            this.btnNuevoGestion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(145)))));
+            this.btnNuevoGestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoGestion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoGestion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNuevoGestion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoGestion.Location = new System.Drawing.Point(0, 73);
+            this.btnNuevoGestion.Margin = new System.Windows.Forms.Padding(15);
+            this.btnNuevoGestion.Name = "btnNuevoGestion";
+            this.btnNuevoGestion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnNuevoGestion.Size = new System.Drawing.Size(200, 37);
+            this.btnNuevoGestion.TabIndex = 4;
+            this.btnNuevoGestion.Text = "Nueva Forma de Pago";
+            this.btnNuevoGestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoGestion.UseVisualStyleBackColor = false;
+            this.btnNuevoGestion.Click += new System.EventHandler(this.btnNuevoGestion_Click);
             // 
             // btnNuevo
             // 
@@ -394,6 +358,28 @@
             this.pLogo.Name = "pLogo";
             this.pLogo.Size = new System.Drawing.Size(200, 180);
             this.pLogo.TabIndex = 0;
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.White;
+            this.lblRol.Location = new System.Drawing.Point(42, 132);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(64, 18);
+            this.lblRol.TabIndex = 8;
+            this.lblRol.Text = "Usuario";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Rol: ";
             // 
             // label1
             // 
@@ -522,28 +508,6 @@
             this.fecha_t.Enabled = true;
             this.fecha_t.Tick += new System.EventHandler(this.fecha_t_Tick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 18);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Rol: ";
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(42, 132);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(64, 18);
-            this.lblRol.TabIndex = 8;
-            this.lblRol.Text = "Usuario";
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,7 +528,6 @@
             this.panelPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pMenu.ResumeLayout(false);
-            this.subMenu2.ResumeLayout(false);
             this.subMenu.ResumeLayout(false);
             this.pLogo.ResumeLayout(false);
             this.pLogo.PerformLayout();
@@ -602,9 +565,7 @@
         private System.Windows.Forms.Label lbfecha;
         private System.Windows.Forms.Timer fecha_t;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel subMenu2;
         private System.Windows.Forms.Button btnNuevoGestion;
-        private System.Windows.Forms.Button btnNuevoVeh;
         private System.Windows.Forms.Label lbHora;
         public System.Windows.Forms.Label lbTitulo;
         public System.Windows.Forms.Panel barTitulo;

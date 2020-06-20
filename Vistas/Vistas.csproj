@@ -108,17 +108,29 @@
     <Compile Include="FrmFormaPago.Designer.cs">
       <DependentUpon>FrmFormaPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGestion.cs">
+    <Compile Include="FrmClase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGestion.Designer.cs">
-      <DependentUpon>FrmGestion.cs</DependentUpon>
+    <Compile Include="FrmClase.Designer.cs">
+      <DependentUpon>FrmClase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLinea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLinea.Designer.cs">
+      <DependentUpon>FrmLinea.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmListadoVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmListadoVentas.Designer.cs">
       <DependentUpon>FrmListadoVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
@@ -149,6 +161,12 @@
     </Compile>
     <Compile Include="FrmNuevoVehiculo.Designer.cs">
       <DependentUpon>FrmNuevoVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipo.Designer.cs">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
@@ -197,14 +215,20 @@
     <EmbeddedResource Include="FrmFormaPago.resx">
       <DependentUpon>FrmFormaPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGestion.resx">
-      <DependentUpon>FrmGestion.cs</DependentUpon>
+    <EmbeddedResource Include="FrmClase.resx">
+      <DependentUpon>FrmClase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLinea.resx">
+      <DependentUpon>FrmLinea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoVentas.resx">
       <DependentUpon>FrmListadoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
@@ -217,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoVehiculo.resx">
       <DependentUpon>FrmNuevoVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipo.resx">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
@@ -351,6 +378,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ajusteEd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

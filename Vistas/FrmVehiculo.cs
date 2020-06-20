@@ -41,8 +41,6 @@ namespace Vistas
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
-
             if (dgvVehiculos.CurrentRow != null)
             {
                 FrmNuevoVehiculo oFrm = new FrmNuevoVehiculo(1);

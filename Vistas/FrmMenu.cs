@@ -174,27 +174,6 @@ namespace Vistas
             }
         }
 
-        private void hideSubMenu2()
-        {
-            if (subMenu2.Visible == true)
-            {
-                subMenu2.Visible = false;
-            }
-        }
-
-        private void showSubMenu2(Panel subMenus)
-        {
-            if (subMenus.Visible == false)
-            {
-                hideSubMenu2();
-                subMenus.Visible = true;
-            }
-            else
-            {
-                subMenus.Visible = false;
-            }
-        }
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Desea cerrar sesion?", "IMPORTANTE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -209,7 +188,7 @@ namespace Vistas
 
         private void btnVehiculo_Click(object sender, EventArgs e)
         {
-            showSubMenu2(subMenu2);
+            AbrirFormInPanel(new FrmVehiculo(), sender);
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -238,14 +217,9 @@ namespace Vistas
             lbHora.Text = DateTime.Now.ToLongTimeString();
         }
 
-        private void btnNuevoVeh_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new FrmVehiculo(), sender);
-        }
-
         private void btnNuevoGestion_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FrmGestion(), sender);
+            AbrirFormInPanel(new FrmFormaPago(), sender);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

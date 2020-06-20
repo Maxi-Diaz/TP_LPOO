@@ -56,6 +56,50 @@ namespace ClaseBase.BD {
             return dt;
         }
 
-       
+        public static void agregarMarca(Marca marca)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "insert_marca";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@desc", marca.Mar_descripcion);
+
+            conexion.Open();
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public static void editarMarca(Marca marca)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "edit_marca";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@id", marca.Mar_id);
+            cmd.Parameters.AddWithValue("@desc", marca.Mar_descripcion);
+
+            conexion.Open();
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public static void eliminarMarca(Marca marca)
+        {
+            SqlConnection conexion = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "eliminar_marca";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@id", marca.Mar_id);
+
+            conexion.Open();
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }

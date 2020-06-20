@@ -176,6 +176,7 @@ C:\Users\Usuario\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe.manife
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.application
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe
 C:\Users\Usuario\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Usuario\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmFormaPago.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\Vistas.exe.config
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\Vistas.exe.manifest
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\bin\Debug\Vistas.application
@@ -189,13 +190,16 @@ D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAnularVenta.re
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmClientes.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAltaCliente.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmFormaPago.resources
-D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmGestion.resources
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmClase.resources
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmLinea.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmListadoVentas.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmMarca.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmMenu.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAltaUsuario.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmNuevaVenta.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmNuevoVehiculo.resources
+D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmTipo.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmUsuario.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmVehiculo.resources
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.Listados.FrmListadoDato.resources
@@ -207,4 +211,3 @@ D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe.manifest
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.application
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe
 D:\Apu\LPOO2020\unidad-3-4\TP_LPOO\Vistas\obj\x86\Debug\Vistas.pdb
-C:\Users\Usuario\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmFormaPago.resources
