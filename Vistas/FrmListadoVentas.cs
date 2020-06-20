@@ -34,8 +34,8 @@ namespace Vistas
             cmbClientes.DisplayMember = "Cliente";
             cmbClientes.ValueMember = "Cliente";
             cmbClientes.DataSource = ClienteABM.list_cliente();
-            //cmbClientes.DataSource = VentasABM.list_cliente();
-            cmbClientes.Text = "Seleccione Cliente";
+            cmbClientes.SelectedIndex = -1;
+            cmbClientes.Text = "--------seleccione un cliente--------";
         }
 
         public void cargar() {
@@ -52,9 +52,14 @@ namespace Vistas
         }
 
         private void btnCompras_Click(object sender, EventArgs e) {
-            ventas.list_Compras(cmbClientes.SelectedValue.ToString());
-            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
-            tbListaVentas.DataSource = ventas.Tabla;
+            try {
+                ventas.list_Compras(cmbClientes.SelectedValue.ToString());
+                cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total);
+                tbListaVentas.DataSource = ventas.Tabla;
+            } catch (Exception a) {
+
+                MessageBox.Show("Debe seleccionar un cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
         }
 
