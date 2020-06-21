@@ -248,12 +248,14 @@ namespace Vistas
         {
             FrmTipo frm = new FrmTipo();
             frm.ShowDialog();
+            load_combo_tipo();
         }
 
         private void btnNuevoClase_Click(object sender, EventArgs e)
         {
             FrmClase frm = new FrmClase();
             frm.ShowDialog();
+            load_combo_clase();
         }
 
         private void btnNuevaMarca_Click(object sender, EventArgs e)
@@ -268,12 +270,12 @@ namespace Vistas
             frm.ShowDialog();
         }
 
-        private void FrmNuevoVehiculo_Load(object sender, EventArgs e)
+        /*private void FrmNuevoVehiculo_Load(object sender, EventArgs e)
         {
             load_combo_marca();
             load_combo_clase();
             load_combo_tipo();
-        }
+        }*/
 
         private void cmbMarca_SelectedIndexChanged( object sender, EventArgs e ) {
             load_combo_linea(int.Parse(cmbMarca.SelectedValue.ToString()));
