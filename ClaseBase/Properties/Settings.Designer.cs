@@ -26,9 +26,8 @@ namespace ClaseBase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Users\\Usuario\\Documents\\GitHub\\TP_LP" +
-            "OO\\BD\\agencia.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=D:\\Apu\\LPOO2020\\unidad-3-4\\TP_LPOO\\BD\\a" +
+            "gencia.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True")]
         public string Conexion {
             get {
                 return ((string)(this["Conexion"]));
