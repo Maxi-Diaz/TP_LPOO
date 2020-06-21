@@ -36,7 +36,7 @@ namespace ClaseBase.BD {
             return dt;
         }
 
-        public static DataTable listarLinea()
+        public static DataTable listarLinea(int id)
         {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
             SqlCommand cmd = new SqlCommand();
@@ -44,8 +44,13 @@ namespace ClaseBase.BD {
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
+            SqlParameter param;
+            param = new SqlParameter("@idM", SqlDbType.Int);
+            param.Direction = ParameterDirection.Input;
+            param.Value = id;
             // Ejecuta la consulta
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.SelectCommand.Parameters.Add(param);
 
             // Llena los datos de la consulta en el DataTable
             DataTable dt = new DataTable();
@@ -62,7 +67,8 @@ namespace ClaseBase.BD {
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexion;
 
-            cmd.Parameters.AddWithValue("@desc", linea.Lin_id);
+            cmd.Parameters.AddWithValue("@desc", linea.Lin_descripcion);
+            cmd.Parameters.AddWithValue("@idM", linea.Mar_id);
 
             conexion.Open();
             cmd.ExecuteNonQuery();

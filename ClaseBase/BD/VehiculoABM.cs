@@ -197,20 +197,35 @@ namespace ClaseBase.BD
         }
 
 
-        public static DataTable list_Vehiculos_lm(int opcion) {
+        public static DataTable list_Vehiculos_lm(int opcion, string matricula) {
             SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
 
             SqlCommand cmd = new SqlCommand();
-            if (opcion == 1) {
-                cmd.CommandText = "vehiculo_Linea";
-            }
-            else {
-                cmd.CommandText = "vehiculo_Marca";
-            }
+            //if (opcion == 1) {
+            //    cmd.CommandText = "vehiculo_Linea";
+            //}
+            //else {
+            //    cmd.CommandText = "vehiculo_Marca";
+            //}
+            cmd.CommandText = "vehiculo_Marca";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
+
+            SqlParameter param;
+
+            param = new SqlParameter("@matricula", SqlDbType.VarChar);
+            param.Direction = ParameterDirection.Input;
+            param.Value = matricula;
+            cmd.Parameters.Add(param);
+
+            param = new SqlParameter("@opc", SqlDbType.Int);
+            param.Direction = ParameterDirection.Input;
+            param.Value = opcion;
+            cmd.Parameters.Add(param);
+
             // Ejecuta la consulta
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //da.SelectCommand.Parameters.Add(param);
 
             // Llena los datos de la consulta en el DataTable
             DataTable dt = new DataTable();

@@ -16,6 +16,7 @@ namespace Vistas
         public FrmLinea()
         {
             InitializeComponent();
+            load_combo_marca();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,7 +26,19 @@ namespace Vistas
 
         private void CargarLinea()
         {
-            tblLineas.DataSource = LineaABM.listarLinea();
+            try {
+                tblLineas.DataSource = LineaABM.listarLinea(int.Parse(cmbMarca.SelectedValue.ToString()));
+            } catch (Exception a){
+                MessageBox.Show(""+a);
+            }
+            
+        }
+
+        private void load_combo_marca() {
+            cmbMarca.DisplayMember = "Descripcion";
+            cmbMarca.ValueMember = "ID";
+            cmbMarca.DataSource = MarcaABM.list_Marca();
+
         }
 
         private void FrmLinea_Load(object sender, EventArgs e)
@@ -35,13 +48,14 @@ namespace Vistas
 
         private void btnNuevaLinea_Click(object sender, EventArgs e)
         {
-            if (txtDesc.Text != "")
+            if (txtDesc.Text != "" || cmbMarca.SelectedIndex != -1)
             {
                 Linea linea = new Linea();
+                linea.Mar_id = int.Parse(cmbMarca.SelectedValue.ToString());
                 linea.Lin_descripcion = txtDesc.Text;
                 LineaABM.agregarLinea(linea);
                 CargarLinea();
-                linea = new Linea();
+                limpiarCampos();
             }
             else
             {
@@ -72,6 +86,7 @@ namespace Vistas
             {
                 Linea linea = new Linea();
                 linea.Lin_id = int.Parse(txtID.Text);
+                
                 linea.Lin_descripcion = txtDesc.Text;
                 LineaABM.editarLinea(linea);
                 CargarLinea();
@@ -84,6 +99,11 @@ namespace Vistas
             }
         }
 
+        private void limpiarCampos() {
+            txtDesc.Text = "";
+            cmbMarca.SelectedIndex = 0;
+        }
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             txtID.Text = "";
@@ -110,6 +130,10 @@ namespace Vistas
             {
                 MessageBox.Show("Seleccione una fila por favor", "Importante", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void cmbMarca_SelectedIndexChanged( object sender, EventArgs e ) {
+            CargarLinea();
         }
     }
 }

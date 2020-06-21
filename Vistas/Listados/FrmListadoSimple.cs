@@ -22,31 +22,31 @@ namespace Vistas.Listados {
 
         private void cargar(string titulo) {
 
-            switch (titulo) {
-                case "Cliente":
-                    lblTitulo.Text = titulo;
-                    dgvListado.DataSource = ClienteABM.cliente_apellido();
-                    break;
+            //switch (titulo) {
+            //    case "Cliente":
+            //        lblTitulo.Text = titulo;
+            //        dgvListado.DataSource = ClienteABM.cliente_apellido();
+            //        break;
 
-                case "Marca":
-                    lblTitulo.Text = "Vehiculos ordenados por marca";
-                    dgvListado.DataSource = VehiculoABM.list_Vehiculos_lm(0);
-                    break;
+            //    case "Marca":
+            //        lblTitulo.Text = "Vehiculos ordenados por marca";
+            //        dgvListado.DataSource = VehiculoABM.list_Vehiculos_lm(0);
+            //        break;
 
-                case "Linea":
-                    lblTitulo.Text = titulo;
-                    dgvListado.DataSource = VehiculoABM.list_Vehiculos_lm(1);
-                    break;
+            //    case "Linea":
+            //        lblTitulo.Text = titulo;
+            //        dgvListado.DataSource = VehiculoABM.list_Vehiculos_lm(1);
+            //        break;
 
-                case "TodoVentas":
-                    lblTitulo.Text = "Ventas";
-                    //dgvListado.DataSource = VentasABM.list_venta();
-                    break;
+            //    case "TodoVentas":
+            //        lblTitulo.Text = "Ventas";
+            //        //dgvListado.DataSource = VentasABM.list_venta();
+            //        break;
 
-                case "":
-                    break;
+            //    case "":
+            //        break;
 
-            }
+            //}
 
 
 

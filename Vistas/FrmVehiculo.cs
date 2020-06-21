@@ -19,6 +19,7 @@ namespace Vistas
         {
             InitializeComponent();
             Cargar();
+            dgvVehiculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
 
@@ -148,15 +149,19 @@ namespace Vistas
 
             if (rbtnLinea.Checked)
             {
-                dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos_lm(1);
+                dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos_lm(1,txtBuscar.Text);
             }
             else
             {
                 if (rbtnMarca.Checked)
                 {
-                    dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos_lm(0);
+                    dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos_lm(0, txtBuscar.Text);
                 }
             }
+        }
+
+        private void btnBuscar_Click( object sender, EventArgs e ) {
+            dgvVehiculos.DataSource = VehiculoABM.list_Vehiculos_lm(0, txtBuscar.Text);
         }
     }
 }

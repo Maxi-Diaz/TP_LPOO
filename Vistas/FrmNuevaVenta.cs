@@ -24,6 +24,7 @@ namespace Vistas
             load_combo_vehiculos();
             load_combo_formaPago();
             cargar_Vendedor(user, pwd);
+            
         }
 
         private void load_combo_clientes()
@@ -110,7 +111,12 @@ namespace Vistas
 
         private void cmbVehiculo_TextChanged(object sender, EventArgs e)
         {
-            txtPrecio.Text = VehiculoABM.precio_vehiculo(Convert.ToInt32(cmbVehiculo.SelectedValue.ToString()));
+            try {
+                txtPrecio.Text = VehiculoABM.precio_vehiculo(Convert.ToInt32(cmbVehiculo.SelectedValue.ToString()));
+            } catch{
+
+            }
+            
         }
 
         private void txtPrecio_KeyPress( object sender, KeyPressEventArgs e ) {
@@ -131,5 +137,17 @@ namespace Vistas
             frm.ShowDialog();
         }
 
+        private void sinVehiculo() {
+            if(cmbVehiculo.SelectedIndex == -1){
+                DialogResult result = MessageBox.Show("Sin Vehiculos Disponibles","ATENCION",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                if (result == DialogResult.OK) {
+                    
+                } 
+            }
+        }
+
+        private void FrmNuevaVenta_Load( object sender, EventArgs e ) {
+            sinVehiculo();
+        }
     }
 }
