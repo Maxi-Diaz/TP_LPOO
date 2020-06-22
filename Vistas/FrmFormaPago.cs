@@ -32,11 +32,20 @@ namespace Vistas
         {
             if (txtDesc.Text != "")
             {
+                try {
                 FormaPago pago = new FormaPago();
                 pago.Pag_descripcion = txtDesc.Text;
                 PagoABM.agregarPago(pago);
                 CargarPago();
                 pago = new FormaPago();
+                    MessageBox.Show("Forma de pago Agregado!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Forma de pago no Registrado!");
+                }
+                
             }
             else
             {
@@ -48,7 +57,8 @@ namespace Vistas
         {
             if (tblFormaPago.CurrentRow != null)
             {
-                FormaPago pago = new FormaPago();
+                try {
+                 FormaPago pago = new FormaPago();
                 pago.Pag_id = Convert.ToInt32(tblFormaPago.CurrentRow.Cells["ID"].Value.ToString());
                 if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -56,6 +66,14 @@ namespace Vistas
                     MessageBox.Show("Se elimino la Clase correctamente", "Importante!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarPago();
                 }
+                    
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("No se pudo eliminar!");
+                }
+              
             }
             else
             {
@@ -70,6 +88,7 @@ namespace Vistas
             btnGuardarNuevo.Visible = false;
             if (tblFormaPago.CurrentRow != null)
             {
+
                 txtIdPago.Text = tblFormaPago.CurrentRow.Cells["ID"].Value.ToString();
                 txtDesc.Text = tblFormaPago.CurrentRow.Cells["Descripcion"].Value.ToString();
             }
@@ -83,11 +102,20 @@ namespace Vistas
         {
             if (txtDesc.Text != "")
             {
+                try {
                 FormaPago pago = new FormaPago();
                 pago.Pag_id = int.Parse(txtIdPago.Text);
                 pago.Pag_descripcion = txtDesc.Text;
                 PagoABM.editarPago(pago);
                 CargarPago();
+                    MessageBox.Show("Pago Editado!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Pago no editado!");
+                }
+              
             }
             else
             {

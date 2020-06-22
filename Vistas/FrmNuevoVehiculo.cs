@@ -40,8 +40,8 @@ namespace Vistas
 
         private void load_combo_marca()
         {
-            cmbMarca.DisplayMember = "Descripcion";
-            cmbMarca.ValueMember = "ID";
+            cmbMarca.DisplayMember = "mar_Nombre";
+            cmbMarca.ValueMember = "mar_ID";
             cmbMarca.DataSource = MarcaABM.list_Marca();
             
         }
@@ -84,7 +84,6 @@ namespace Vistas
                     {
                         agregar();
                         limpiarCampos();
-                        this.Close();
                     }
                     else
                     {
@@ -97,7 +96,6 @@ namespace Vistas
                     {
                         editar();
                         limpiarCampos();
-                        this.Close();
                     }
                     else
                     {
@@ -151,11 +149,17 @@ namespace Vistas
                 oVehiculo.Veh_Estado = true;
 
 
+                if (VehiculoABM.vehiculo_existente(oVehiculo.Veh_Matricula) == 0) {
+                   
+                        VehiculoABM.insertVehiculo(oVehiculo);
+                        MessageBox.Show("Vehiculo Registrado!");
+                        this.Close();
+                }else{
+                    MessageBox.Show("Matricula Existente");
+                }
 
 
-
-                VehiculoABM.insertVehiculo(oVehiculo);
-                MessageBox.Show("Vehiculo Registrado!");
+               
             }
             catch (Exception a)
             {
@@ -188,9 +192,17 @@ namespace Vistas
                 oVehiculo.Cls_ID = int.Parse(cmb_clase.SelectedValue.ToString());
                 oVehiculo.Veh_Precio = Convert.ToDecimal(txtPrecio.Text);
                 oVehiculo.Veh_Estado = true;
+                if (VehiculoABM.vehiculo_existente(oVehiculo.Veh_Matricula) <= 1) {
+                    
+                         VehiculoABM.editarVehiculo(oVehiculo);
+                         MessageBox.Show("Vehiculo Modificado!");
+                         this.Close();
 
-                VehiculoABM.editarVehiculo(oVehiculo);
-                MessageBox.Show("Vehiculo Modificado!");
+                } else {
+                    MessageBox.Show("Matricula Existente");
+                }
+
+              
             }
             catch (Exception a)
             {
@@ -270,15 +282,18 @@ namespace Vistas
             frm.ShowDialog();
         }
 
-        /*private void FrmNuevoVehiculo_Load(object sender, EventArgs e)
+        private void FrmNuevoVehiculo_Load(object sender, EventArgs e)
         {
             load_combo_marca();
             load_combo_clase();
             load_combo_tipo();
-        }*/
+        }
 
         private void cmbMarca_SelectedIndexChanged( object sender, EventArgs e ) {
-            load_combo_linea(int.Parse(cmbMarca.SelectedValue.ToString()));
+            
+                load_combo_linea(Convert.ToInt32(cmbMarca.SelectedValue));
+            
+            
         }
     }
 }

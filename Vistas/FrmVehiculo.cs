@@ -36,6 +36,7 @@ namespace Vistas
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             FrmNuevoVehiculo oFrm = new FrmNuevoVehiculo(0);
+            oFrm.label11.Text = "Nuevo Vehiculo";
             oFrm.ShowDialog();
             Cargar();
         }
@@ -45,6 +46,7 @@ namespace Vistas
             if (dgvVehiculos.CurrentRow != null)
             {
                 FrmNuevoVehiculo oFrm = new FrmNuevoVehiculo(1);
+                oFrm.label11.Text = "Modificar Vehiculo";
                 oFrm.txtID.Text = dgvVehiculos.CurrentRow.Cells["ID"].Value.ToString();
                 oFrm.txtMatricula.Text = dgvVehiculos.CurrentRow.Cells["Matricula"].Value.ToString();
                 oFrm.cmbMarca.SelectedValue = dgvVehiculos.CurrentRow.Cells["mar_ID"].Value.ToString();

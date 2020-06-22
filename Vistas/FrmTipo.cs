@@ -32,6 +32,7 @@ namespace Vistas
         {
             if (tblTipoVeh.CurrentRow != null)
             {
+                try {
                 TipoVehiculo tipo = new TipoVehiculo();
                 tipo.Tip_id = Convert.ToInt32(tblTipoVeh.CurrentRow.Cells["ID"].Value.ToString());
                 if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -40,6 +41,13 @@ namespace Vistas
                     MessageBox.Show("Se elimino el Tipo correctamente", "Importante!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarTipo();
                 }
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("No se pudo eliminar!");
+                }
+                
             }
             else
             {
@@ -68,6 +76,7 @@ namespace Vistas
         {
             if (txtTipoClase.Text != "")
             {
+                try {
                 TipoVehiculo tipo = new TipoVehiculo();
                 tipo.Tip_id = int.Parse(txtTipoID.Text);
                 tipo.Tip_descripcion = txtTipoClase.Text;
@@ -75,6 +84,14 @@ namespace Vistas
                 CargarTipo();
                 txtTipoID.Text = "";
                 txtTipoClase.Text = "";
+                    MessageBox.Show("Tipo de vehiculo Modificado!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("No se pudo editar!");
+                }
+               
             }
             else
             {
@@ -95,12 +112,21 @@ namespace Vistas
         {
             if (txtTipoClase.Text != "")
             {
+                try {
                 TipoVehiculo tipo = new TipoVehiculo();
                 tipo.Tip_descripcion = txtTipoClase.Text;
                 TipoABM.agregarTipo(tipo);
                 CargarTipo();
                 txtTipoID.Text = "";
                 txtTipoClase.Text = "";
+                    MessageBox.Show("Tipo de vehiculo Agregado!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("tipo de vehiculo no Registrado!");
+                }
+                
             }
             else
             {
@@ -111,6 +137,10 @@ namespace Vistas
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtTipoClase_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }

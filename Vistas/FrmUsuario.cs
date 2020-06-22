@@ -17,6 +17,7 @@ namespace Vistas
         public FrmUsuario()
         {
             InitializeComponent();
+            tblUsuario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             
         }
 

@@ -38,12 +38,21 @@ namespace Vistas
         {
             if (txtClaseDesc.Text != "")
             {
+                try {
                 ClaseVehiculo clase = new ClaseVehiculo();
                 clase.Cls_descripcion = txtClaseDesc.Text;
                 ClaseABM.agregarClase(clase);
                 CargarClase();
                 txtClaseID.Text = "";
                 txtClaseDesc.Text = "";
+                    MessageBox.Show("Clase Agregada!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Clase no Registrada!");
+                }
+               
             }
             else
             {
@@ -55,7 +64,8 @@ namespace Vistas
         {
             if (tblClaseVeh.CurrentRow != null)
             {
-                ClaseVehiculo clase = new ClaseVehiculo();
+                try {
+                 ClaseVehiculo clase = new ClaseVehiculo();
                 clase.Cls_ID = Convert.ToInt32(tblClaseVeh.CurrentRow.Cells["ID"].Value.ToString());
                 if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -63,6 +73,13 @@ namespace Vistas
                     MessageBox.Show("Se elimino la Clase correctamente", "Importante!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarClase();
                 }
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("No se pudo eliminar!");
+                }
+               
             }
             else
             {
@@ -90,6 +107,7 @@ namespace Vistas
         {
             if (txtClaseDesc.Text != "")
             {
+                try {
                 ClaseVehiculo clase = new ClaseVehiculo();
                 clase.Cls_ID = int.Parse(txtClaseID.Text);
                 clase.Cls_descripcion = txtClaseDesc.Text;
@@ -97,6 +115,14 @@ namespace Vistas
                 CargarClase();
                 txtClaseID.Text = "";
                 txtClaseDesc.Text = "";
+                    MessageBox.Show("Clase Editada!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Clase no Registrada!");
+                }
+                
             }
             else
             {

@@ -18,6 +18,7 @@ namespace Vistas
         public FrmClientes()
         {
             InitializeComponent();
+            tblCliente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)

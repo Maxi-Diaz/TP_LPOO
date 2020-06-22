@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vistas", "Vistas\Vistas.csp
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador SGP", "Instalador SGP\Instalador SGP.vdproj", "{F2CA6F70-7067-4F11-B0D6-13C8449957F4}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador Agencia", "Instalador Agencia\Instalador Agencia.vdproj", "{69489684-E4DA-46AD-8DF2-4270AD12EA3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,12 @@ Global
 		{F2CA6F70-7067-4F11-B0D6-13C8449957F4}.Release|Any CPU.ActiveCfg = Release
 		{F2CA6F70-7067-4F11-B0D6-13C8449957F4}.Release|Mixed Platforms.ActiveCfg = Release
 		{F2CA6F70-7067-4F11-B0D6-13C8449957F4}.Release|x86.ActiveCfg = Release
+		{69489684-E4DA-46AD-8DF2-4270AD12EA3C}.Debug|Any CPU.ActiveCfg = Debug
+		{69489684-E4DA-46AD-8DF2-4270AD12EA3C}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{69489684-E4DA-46AD-8DF2-4270AD12EA3C}.Debug|x86.ActiveCfg = Debug
+		{69489684-E4DA-46AD-8DF2-4270AD12EA3C}.Release|Any CPU.ActiveCfg = Release
+		{69489684-E4DA-46AD-8DF2-4270AD12EA3C}.Release|Mixed Platforms.ActiveCfg = Release
+		{69489684-E4DA-46AD-8DF2-4270AD12EA3C}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

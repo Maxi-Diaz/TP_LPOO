@@ -27,12 +27,21 @@ namespace Vistas
         {
             if (txtDesc.Text != "")
             {
+                try {
                 Marca marca = new Marca();
                 marca.Mar_descripcion = txtDesc.Text;
                 MarcaABM.agregarMarca(marca);
                 CargarMarca();
                 txtID.Text = "";
                 txtDesc.Text = "";
+                    MessageBox.Show("Marca Agregada!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Marca no Registrada!");
+                }
+              
             }
             else
             {
@@ -54,14 +63,23 @@ namespace Vistas
         {
             if (tblMarca.CurrentRow != null)
             {
-                Marca marca = new Marca();
-                marca.Mar_id = Convert.ToInt32(tblMarca.CurrentRow.Cells["ID"].Value.ToString());
+                try {
+                    Marca marca = new Marca();
+                marca.Mar_id = Convert.ToInt32(tblMarca.CurrentRow.Cells["mar_ID"].Value.ToString());
                 if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     MarcaABM.eliminarMarca(marca);
                     MessageBox.Show("Se elimino el Marca correctamente", "Importante!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarMarca();
                 }
+                  
+                    
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Marca no eliminada!");
+                }
+               
             }
             else
             {
@@ -76,8 +94,8 @@ namespace Vistas
             btnNuevaMarca.Visible = false;
             if (tblMarca.CurrentRow != null)
             {
-                txtID.Text = tblMarca.CurrentRow.Cells["ID"].Value.ToString();
-                txtDesc.Text = tblMarca.CurrentRow.Cells["Descripcion"].Value.ToString();
+                txtID.Text = tblMarca.CurrentRow.Cells["mar_ID"].Value.ToString();
+                txtDesc.Text = tblMarca.CurrentRow.Cells["mar_Nombre"].Value.ToString();
 
             }
             else
@@ -90,13 +108,22 @@ namespace Vistas
         {
             if (txtDesc.Text != "")
             {
-                Marca marca = new Marca();
-                marca.Mar_id = int.Parse(txtID.Text);
-                marca.Mar_descripcion = txtDesc.Text;
-                MarcaABM.editarMarca(marca);
-                CargarMarca();
-                txtID.Text = "";
-                txtDesc.Text = "";
+                try {
+                    Marca marca = new Marca();
+                    marca.Mar_id = int.Parse(txtID.Text);
+                    marca.Mar_descripcion = txtDesc.Text;
+                    MarcaABM.editarMarca(marca);
+                    CargarMarca();
+                    txtID.Text = "";
+                    txtDesc.Text = "";
+                MessageBox.Show("Marca Editada!");
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("error al editar");
+                }
+
+                
             }
             else
             {

@@ -27,6 +27,7 @@ namespace Vistas
             load_combo_clientes();
             load_combo_marcas();
             tbListaVentas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            btnreset.Enabled = true;
 
         }
 
@@ -77,9 +78,16 @@ namespace Vistas
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            ventas.buscarMarcaVenta(cmbMarca.SelectedValue.ToString());
-            cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total_validada, ventas.Importe_total_anulada);
-            tbListaVentas.DataSource = ventas.Tabla;
+            
+            try {
+                ventas.buscarMarcaVenta(cmbMarca.SelectedValue.ToString());
+                cargar_lblInforme(ventas.Total_ventas, ventas.Total_anulada, ventas.Importe_total_validada, ventas.Importe_total_anulada);
+                tbListaVentas.DataSource = ventas.Tabla;
+            }
+            catch (Exception a) {
+
+                MessageBox.Show("Debe seleccionar una marca", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void load_combo_marcas() {
@@ -154,7 +162,7 @@ namespace Vistas
             pdf.WidthPercentage = 100;
             pdf.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
             pdf.DefaultCell.BorderWidth = 1;
-            float[] columwidth = { 3, 15, 8, 10, 10, 10, 10, 10, 10, 0, 0 };
+            float[] columwidth = { 3, 15, 8, 10, 10, 10, 10, 10, 10, 0, 0, 10 };
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
             pdf.SetWidths(columwidth);
 
@@ -398,6 +406,10 @@ namespace Vistas
 
 
 
+        }
+
+        private void btnreset_Click(object sender, EventArgs e) {
+            cargar();
         }
     }
 }

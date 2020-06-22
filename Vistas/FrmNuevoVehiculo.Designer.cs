@@ -423,7 +423,6 @@
         private System.Windows.Forms.Label Matricula;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label11;
         public System.Windows.Forms.CheckBox chbGPS;
         public System.Windows.Forms.ComboBox cmbLinea;
         public System.Windows.Forms.ComboBox cmbMarca;
@@ -440,5 +439,6 @@
         private System.Windows.Forms.Button btnNuevoClase;
         private System.Windows.Forms.Button btnNuevoTipo;
         private System.Windows.Forms.Button btnNuevaLinea;
+        public System.Windows.Forms.Label label11;
     }
 }

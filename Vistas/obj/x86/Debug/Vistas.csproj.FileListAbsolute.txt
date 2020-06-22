@@ -113,7 +113,6 @@ C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\bin\Debug\Vistas.exe.manif
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\bin\Debug\Vistas.application
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.fBienvenida.resources
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmAnularVenta.resources
-C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmGestion.resources
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.exe.manifest
 C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.application
 C:\Users\Maxi-Diaz\Downloads\TP_LPOO\Vistas\bin\Debug\Vistas.exe.config
@@ -217,3 +216,8 @@ C:\Users\Usuario\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.pdb
 C:\Users\Usuario\Documents\GitHub\TP_LPOO-692fbe47059ad6059458d2e311c730f3d46e0431\Vistas\bin\Debug\Vistas.exe.config
 C:\Users\Usuario\Documents\GitHub\TP_LPOO-692fbe47059ad6059458d2e311c730f3d46e0431\Vistas\obj\x86\Debug\Vistas.exe
 C:\Users\Usuario\Documents\GitHub\TP_LPOO-692fbe47059ad6059458d2e311c730f3d46e0431\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmFormaPago.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmClase.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmLinea.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmMarca.resources
+C:\Users\Ma Ry Youkai\Documents\GitHub\TP_LPOO\Vistas\obj\x86\Debug\Vistas.FrmTipo.resources

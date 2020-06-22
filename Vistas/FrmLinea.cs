@@ -35,8 +35,8 @@ namespace Vistas
         }
 
         private void load_combo_marca() {
-            cmbMarca.DisplayMember = "Descripcion";
-            cmbMarca.ValueMember = "ID";
+            cmbMarca.DisplayMember = "mar_Nombre";
+            cmbMarca.ValueMember = "mar_ID";
             cmbMarca.DataSource = MarcaABM.list_Marca();
 
         }
@@ -50,12 +50,21 @@ namespace Vistas
         {
             if (txtDesc.Text != "" || cmbMarca.SelectedIndex != -1)
             {
+                try {
                 Linea linea = new Linea();
                 linea.Mar_id = int.Parse(cmbMarca.SelectedValue.ToString());
                 linea.Lin_descripcion = txtDesc.Text;
                 LineaABM.agregarLinea(linea);
                 CargarLinea();
                 limpiarCampos();
+                    MessageBox.Show("Linea Agregada!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Linea no Registrada!");
+                }
+               
             }
             else
             {
@@ -84,6 +93,7 @@ namespace Vistas
         {
             if (txtDesc.Text != "")
             {
+                try {
                 Linea linea = new Linea();
                 linea.Lin_id = int.Parse(txtID.Text);
                 
@@ -92,6 +102,14 @@ namespace Vistas
                 CargarLinea();
                 txtID.Text = "";
                 txtDesc.Text = "";
+                    MessageBox.Show("Linea Modificada!");
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("No se pudo editar!");
+                }
+               
             }
             else
             {
@@ -117,6 +135,7 @@ namespace Vistas
         {
             if (tblLineas.CurrentRow != null)
             {
+                try {
                 Linea linea = new Linea();
                 linea.Lin_id = Convert.ToInt32(tblLineas.CurrentRow.Cells["ID"].Value.ToString());
                 if (MessageBox.Show("Seguro quiere eliminarlo", "Importante!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -125,6 +144,14 @@ namespace Vistas
                     MessageBox.Show("Se elimino Linea correctamente", "Importante!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarLinea();
                 }
+                   
+
+                }
+                catch (Exception a) {
+                    MessageBox.Show("" + a);
+                    MessageBox.Show("Usuario no Registrado!");
+                }
+               
             }
             else
             {
