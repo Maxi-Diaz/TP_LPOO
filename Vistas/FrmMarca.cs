@@ -56,7 +56,7 @@ namespace Vistas
 
         private void CargarMarca()
         {
-            tblMarca.DataSource = MarcaABM.list_Marca();
+            tblMarca.DataSource = MarcaABM.list_Marca_Tabla();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

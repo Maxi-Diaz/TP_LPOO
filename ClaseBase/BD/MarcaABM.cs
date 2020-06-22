@@ -55,6 +55,24 @@ namespace ClaseBase.BD {
 
             return dt;
         }
+        public static DataTable list_Marca_Tabla() {
+
+            SqlConnection cnn = new SqlConnection(ClaseBase.Properties.Settings.Default.Conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "marca_lista_tabla";
+            //    cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
 
         public static void agregarMarca(Marca marca)
         {
